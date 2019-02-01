@@ -1,0 +1,12 @@
+<view class="container">
+  <title>{{title}}</title>
+  <text>我是一个自己创建的列表</text>
+  <text>这是获取的内容</text>
+  <text style="color:red">{{msg}}</text>
+  <button bindtap="getAddBoxes">获取自己加入的信息</button>
+  <text>信息来了</text>
+  <text style="color:red">{{msg1}}</text>
+  <button bindtap="getCreateBoxes">获取自己创建的盒子</button>
+  <text>信息来了</text>
+  <text style="color:red">{{msg}}</text>
+</view>

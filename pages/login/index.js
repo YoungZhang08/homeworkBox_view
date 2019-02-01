@@ -1,5 +1,7 @@
 //index.js
 //获取应用实例
+const { request } = require('../../utils/request')
+
 const app = getApp()
 
 Page({
@@ -13,6 +15,11 @@ Page({
   bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'
+    })
+  },
+  jump_boxes: () => {
+    wx.navigateTo({
+      url: '../boxes/index'
     })
   },
   onLoad: function () {
@@ -52,19 +59,28 @@ Page({
       userInfo,
       hasUserInfo: true
     }, () => {
-      wx.request({
-        url: `http://127.0.0.1:8000/homework/addUser`,
+      request({
+        url: '/addUser',
+        method: 'POST',
         data: {
           userId: app.globalData.openId,
           name,
           portrait,
-        },
-        method: 'POST',
-        dataType: 'json',
-        success: res => {
-          console.log(res)
-        },
-        fail: err => {
+        }
+      }, (bool, res) => {
+        console.log(bool, res)
+        if (bool) {
+          wx.showToast({
+            title: '登陆成功',
+            icon: 'none',
+            duration: 500,
+          })
+          setTimeout(() => {
+            wx.navigateTo({
+              url: '../boxes/index'
+            })
+          }, 500);
+        } else {
           wx.showToast({
             title: '登录失败',
             icon: 'none',

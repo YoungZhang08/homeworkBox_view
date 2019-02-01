@@ -1,7 +1,8 @@
 {
   "pages":[
     "pages/login/index",
-    "pages/home/index",
+    "pages/boxes/index",
+    "pages/createBox/index",
     "pages/logs/logs"
   ],
   "window":{

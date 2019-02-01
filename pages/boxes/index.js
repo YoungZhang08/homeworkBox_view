@@ -54,10 +54,6 @@ Page({
       }
     })
   },
-  //创建盒子
-  createBox: function () {
-    // request()
-  },
   onLoad: function () {
     this.getCreateBoxes()
   },

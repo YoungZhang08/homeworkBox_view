@@ -1,0 +1,6 @@
+<view class="container">
+  <text>请输入id</text>
+  <!--TODO： input 有一些属性可以直接用 -->
+  <input type="text" value="{{boxId}}" bindinput="bindBoxId" focus="{{true}}" placeholder="请输入id" maxlength="5" />
+  <button bindtap="addBox">加入盒子</button>
+</view>

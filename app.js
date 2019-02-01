@@ -33,8 +33,8 @@ App({
             }
             request(data, (bool, res) => {
               if (bool) {
-                if (data.status === 200) {
-                  const { name: nickName, portrait: avatarUrl} = res
+                if (res.status === 200) {
+                  const { name: nickName, portrait: avatarUrl} = res.data
                   this.globalData.userInfo = {
                     nickName,
                     avatarUrl,

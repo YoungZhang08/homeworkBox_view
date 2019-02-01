@@ -2,6 +2,7 @@
   "pages":[
     "pages/login/index",
     "pages/boxes/index",
+    "pages/createBox/index",
     "pages/logs/logs"
   ],
   "window":{

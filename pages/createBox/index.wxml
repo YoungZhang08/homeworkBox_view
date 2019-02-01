@@ -1,0 +1,13 @@
+<view class="container">
+  <text>请输入盒子名称</text>
+  <!--TODO： input 有一些属性可以直接用 -->
+  <input type="text" value="{{boxId}}" bindtap="bindBoxId" placeholder="请输入盒子Id" maxlength="5" />
+  <button bindtap="getRandom">换一个id</button>
+  <text>请输入课程名称</text>
+  <!--TODO： input 有一些属性可以直接用 -->
+  <input type="text" value="{{course}}" bindinput="bindCourse" placeholder="请输入课程名称" maxlength="40" />
+  <text>请输入班级名称</text>
+  <!--TODO： input 有一些属性可以直接用 -->
+  <input type="text" value="{{className}}" bindinput="bindClassName" placeholder="请输入班级名称" maxlength="40" />
+  <button bindtap="createBox">创建盒子</button>
+</view>

@@ -9,4 +9,6 @@
   <button bindtap="getCreateBoxes">获取自己创建的盒子</button>
   <text>信息来了</text>
   <text style="color:red">{{msg}}</text>
+  <navigator url="../createBox/index" style="color: green">创建盒子</navigator>
+  <navigator url="../joinBox/index" style="color: blue">加入盒子</navigator>
 </view>

@@ -3,6 +3,7 @@
     "pages/login/index",
     "pages/boxes/index",
     "pages/createBox/index",
+    "pages/joinBox/index",
     "pages/logs/logs"
   ],
   "window":{

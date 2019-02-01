@@ -4,20 +4,6 @@ const { request } = require('../../utils/request')
 Page({
   data: {
     boxId: '',
-    course: '',
-    className: ''
-  },
-  // 实时更新课程名称
-  bindCourse: function (e) {
-    this.setData({
-      course: e.detail.value
-    })
-  },
-  // 实时更新班级名称
-  bindClassName: function (e) {
-    this.setData({
-      className: e.detail.value
-    })
   },
   // 实时更新id
   bindBoxId: function (e) {
@@ -25,29 +11,14 @@ Page({
       boxId: e.detail.value
     })
   },
-  // 获取随机id
-  getRandom: function () {
-    request({
-      url: '/getRandom',
-      method: 'GET',
-    }, (bool, res) => {
-      if (bool) {
-        this.setData({
-          boxId: res.id
-        })
-      }
-    })
-  },
   // 创建盒子
-  createBox: function () {
-    const { boxId, course, className } = this.data
+  addBox: function () {
+    const { boxId } = this.data
     request({
-      url: '/createBox',
+      url: '/addUserBox',
       data: {
         boxId,
-        createId: app.globalData.openId,
-        course,
-        className
+        userId: app.globalData.openId,
       },
       method: 'POST'
     }, (bool, res) => {
@@ -72,6 +43,5 @@ Page({
     })
   },
   onLoad: function () {
-    this.getRandom()
   }
 })

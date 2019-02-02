@@ -32,6 +32,7 @@ App({
               }
             }
             request(data, (bool, res) => {
+              console.log(bool)
               if (bool) {
                 if (res.status === 200) {
                   const { name: nickName, portrait: avatarUrl} = res.data

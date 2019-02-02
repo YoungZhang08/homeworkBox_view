@@ -12,7 +12,7 @@
 		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.4.2",
+	"libVersion": "2.5.2",
 	"appid": "wx5ce885951fb4c321",
 	"projectname": "homeworkBox",
 	"debugOptions": {

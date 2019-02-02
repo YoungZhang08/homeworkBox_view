@@ -1,15 +1,20 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view wx:if="{{hasUserInfo}}" class='signin'>
+
+    <view class="userinfo-avatar">
+      <image bindtap="bindViewTap" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    </view>
+
+    <view class="userinfo-nickname">{{userInfo.nickName}}</view>
+
+    <view class="login">
+      <button bindtap="jump_boxes">进入小程序</button>
+    </view>
+
   </view>
-  <view class="userinfo">
-    <text>确认登陆</text>
-    <button wx:if="{{hasUserInfo}}" bindtap="jump_boxes">点击进入</button>
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登陆 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+
+  <view wx:if="{{!hasUserInfo && canIUse}}" class='signup'>
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">使用微信授权登录</button>
   </view>
 </view>

@@ -23,7 +23,7 @@ App({
             this.globalData.openId = openid
             this.globalData.sessionKey = session_key
             wx.request({
-              url: `http://127.0.0.1:8000/homework/findUser`,
+              url: `http://127.0.0.1:8000/homework/addUser`,
               data: {
                 userId: openid,
               },

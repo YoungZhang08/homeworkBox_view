@@ -10,11 +10,6 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
-  jump_boxes: () => {
-    wx.navigateTo({
-      url: '../boxes/index'
-    })
-  },
   onLoad: function () {
     console.log(app.globalData.userInfo)
     if (app.globalData.userInfo) {

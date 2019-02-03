@@ -9,7 +9,7 @@
     <view class="userinfo-nickname">{{userInfo.nickName}}</view>
 
     <view class="login">
-      <button bindtap="jump_boxes">进入小程序</button>
+      <navigator url="../boxes/index" open-type="switchTab">进入小程序</navigator>
     </view>
 
   </view>

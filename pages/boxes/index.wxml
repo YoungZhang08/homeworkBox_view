@@ -10,7 +10,14 @@
       <navigator open-type="switchTab" url="/boxesList/index">我加入的</navigator>
     </view>
     <view class="tab-right">
-        <image bindtap='' src="/images/add.png" />
+        <image bindtap='showPopup' src="/images/add.png" />
     </view>
+    <popup class="popup"
+      btn_create="创建盒子"
+      btn_add="加入盒子"
+      bind:create="createBox"
+      bind:add="addBox"
+    >
+    </popup>
   </view>
 </view>

@@ -1,0 +1,9 @@
+<view class="hw-popup" hidden="{{flag}}">
+  <view class='popup-container'>
+    <view class="hw-popup-btn">
+      <text class="btn-create" bindtap='createBox'>{{btn_create}}</text>
+      <text class="btn-add" bindtap='addBox'>{{btn_add}}</text>
+    </view>
+  </view>
+</view>
+<slot></slot>

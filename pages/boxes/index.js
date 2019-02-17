@@ -7,8 +7,20 @@ const app = getApp()
 Page({
   data: {
     title: '作业盒子',
-    msg: '',
-    msg1: '',
+  },
+  onReady: function() {
+    this.popup = this.selectComponent('.popup')
+  },
+  showPopup() {
+    this.popup.showPopup()
+  },
+  createBox() {
+    console.log('创建盒子')
+    this.popup.hidePopup()
+  },
+  addBox() {
+    console.log('加入盒子')
+    this.popup.hidePopup()
   },
   //获取加入的盒子
   getAddBoxes: function() {

@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "作业盒子"
+  "navigationBarTitleText": "作业盒子",
+  "usingComponents": {
+    "popup": "../../component/popup/index"
+  }
 }

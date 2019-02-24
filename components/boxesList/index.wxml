@@ -1,0 +1,14 @@
+<view class="hw-boxlist">
+  <view wx:for="{{list}}" wx:key="index" class="box-content">
+    <view class="header">
+      <view class="left">
+        <img src="../images/boxlist_left.png" alt="" />
+      </view>
+    </view>
+    <view class="right">
+      <text>{{item.course}}</text>
+      <text>{{item.class}}</text>
+    </view>
+  </view>
+</view>
+<slot />

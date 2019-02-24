@@ -23,7 +23,7 @@
   height: 100%;
   margin: 0 auto;
 }
-.hw-popup-btn text {
+.hw-popup-btn navigator {
   font-size: 32rpx; 
   margin: 0 auto;
   margin-left: 7.5%;

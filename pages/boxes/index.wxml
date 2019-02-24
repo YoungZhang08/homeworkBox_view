@@ -6,8 +6,8 @@
 
   <view class="boxes-tab">
     <view class="tab-left">
-      <navigator open-type="switchTab" url="/boxesList/index">我创建的</navigator>
-      <navigator open-type="switchTab" url="/boxesList/index">我加入的</navigator>
+      <navigator open-type="switchTab" url="../../components/boxesList/index">我创建的</navigator>
+      <navigator open-type="switchTab" url="../../components/boxesList/index">我加入的</navigator>
     </view>
     <view class="tab-right">
         <image bindtap='showPopup' src="/images/add.png" />

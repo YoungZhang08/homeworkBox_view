@@ -1,0 +1,13 @@
+<!--components/aboutWe/index.wxml-->
+<view class="aboutwe">
+  <view class="aboutwe-top">
+    <image src="/images/homework_logo.png" />
+    <text>作业盒子 1.0</text>
+  </view>
+
+  <view class="aboutwe-bottom">
+      <navigator class="aboutwe-operation" open-type="navigate" url="../operation/index">操作手册</navigator>
+      <navigator class="aboutwe-feedback" open-type="navigate" url="../feedback/index">反馈建议</navigator>
+  </view>
+
+</view>

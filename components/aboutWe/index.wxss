@@ -1,33 +1,33 @@
-/* pages/users/index.wxss */
 page {
   height: 100%;
 }
-.users {
+.aboutwe {
   width: 100%;
   height: 100%;
   background-color: #eeeeee;
 }
-.users-top {
+.aboutwe-top {
   width: 100%;
-  height: 500rpx;
+  height: 450rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.users-top image {
+.aboutwe-top image {
   margin-top: 100rpx;
   width: 200rpx;
   height: 200rpx;
+  border-radius: 50%;
 }
-.users-top text {
+.aboutwe-top text {
   margin-top: 20rpx;
   font-size: 30rpx;
 }
-.users-bottom {
+.aboutwe-bottom {
   width: 100%;
   height: 160rpx;
 }
-.users-bottom navigator {
+.aboutwe-bottom navigator {
   width: 100%;
   height: 75rpx;
   line-height: 75rpx;

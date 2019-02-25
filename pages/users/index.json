@@ -1,4 +1,7 @@
 {
   "navigationBarTitleText": "个人中心",
-  "usingComponents": {}
+  "usingComponents": {
+    "sources": "../../components/sources/index",
+    "aboutWe": "../../components/aboutWe/index"
+  }
 }

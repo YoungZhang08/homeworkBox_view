@@ -4,10 +4,9 @@
     <image src="/images/boxlist_left.png" />
     <text>Youngzhang08</text>
   </view>
-  
 
   <view class="users-bottom">
-      <navigator class="users-source" url="">我的资源</navigator>
-      <navigator class="users-about" url="">关于我们</navigator>
+      <navigator class="users-source" open-type="navigate" url="../../components/sources/index">我的资源</navigator>
+      <navigator class="users-about" open-type="navigate" url="../../components/aboutWe/index">关于我们</navigator>
   </view>
 </view>

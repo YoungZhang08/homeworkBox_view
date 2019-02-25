@@ -1,2 +1,13 @@
 <!--pages/users/index.wxml-->
-<text>pages/users/index.wxml</text>
+<view class="users">
+  <view class="users-top">
+    <image src="/images/boxlist_left.png" />
+    <text>Youngzhang08</text>
+  </view>
+  
+
+  <view class="users-bottom">
+      <navigator class="users-source" url="">我的资源</navigator>
+      <navigator class="users-about" url="">关于我们</navigator>
+  </view>
+</view>

@@ -1,1 +1,39 @@
 /* pages/users/index.wxss */
+page {
+  height: 100%;
+}
+.users {
+  width: 100%;
+  height: 100%;
+  background-color: #eeeeee;
+}
+.users-top {
+  width: 100%;
+  height: 500rpx;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.users-top image {
+  margin-top: 100rpx;
+  width: 200rpx;
+  height: 200rpx;
+}
+.users-top text {
+  margin-top: 20rpx;
+  font-size: 30rpx;
+}
+.users-bottom {
+  width: 100%;
+  height: 160rpx;
+}
+.users-bottom navigator {
+  width: 100%;
+  height: 75rpx;
+  line-height: 75rpx;
+  font-size: 30rpx;
+  background-color: white;
+  border-bottom: 1px solid #efefef;
+  text-indent: 50rpx; 
+}

@@ -22,6 +22,12 @@ page {
   height: 120rpx;
   border-bottom: 1px solid #e4e4e4;
 }
+.boxes-list {
+  width: 650rpx;
+  height: 120rpx;
+  margin-top: 22rpx;
+  border: 1px solid black;
+}
 .tab-left {
   width: 306rpx;
   height: 48rpx;

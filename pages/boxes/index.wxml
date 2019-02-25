@@ -20,4 +20,8 @@
     >
     </popup>
   </view>
+
+  <view class='boxes-list'>
+    <boxesList list="{{list}}"></boxesList>
+  </view>
 </view>

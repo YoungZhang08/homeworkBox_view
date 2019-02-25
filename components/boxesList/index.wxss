@@ -1,12 +1,9 @@
-.list {
+.hw-boxlist {
   width: 100%;
-  padding: 0 40rpx;
-  border-radius: 8rpx;
 }
-.content {
+.box-content {
   width: 100%;
-  height: 300rpx;
-  margin-top: 50rpx;
-  padding: 0 40rpx;
-  box-shadow: 0 0 1px rgb(212, 211, 211);
+  height: 100rpx;
+  padding: 10 50rpx;
+  border-bottom: 1px solid #efefef;
 }

@@ -1,4 +1,4 @@
-.page {
+page {
   height: 100%;
 }
 .feedback {
@@ -7,7 +7,6 @@
   background-color: #eeeeee;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 .feedback text {
@@ -33,6 +32,6 @@
   color: white;
   font-size: 32rpx;
   line-height: 60rpx;
-  border-radius: 0;
+  border-radius: 10rpx;
   margin-top: 508rpx;
 }

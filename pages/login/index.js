@@ -1,5 +1,5 @@
-//index.js
-//获取应用实例
+// index.js
+// 获取应用实例
 const { request } = require('../../utils/request')
 
 const app = getApp()
@@ -10,14 +10,14 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
-  onLoad: function () {
-    console.log(app.globalData.userInfo)
+  onLoad: function() {
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
-    } else if (this.data.canIUse){
+    } else if (this.data.canIUse) {
+
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
@@ -27,6 +27,7 @@ Page({
         })
       }
     } else {
+
       // 在没有 open-type=getUserInfo 版本的兼容处理
       wx.getUserInfo({
         success: res => {
@@ -40,43 +41,46 @@ Page({
     }
   },
   getUserInfo: function(e) {
-    console.log(e)
     const { userInfo } = e.detail
     const { nickName: name, avatarUrl: portrait } = userInfo
+
     app.globalData.userInfo = userInfo
-    this.setData({
-      userInfo,
-      hasUserInfo: true
-    }, () => {
-      request({
-        url: '/addUser',
-        method: 'POST',
-        data: {
-          userId: app.globalData.openId,
-          name,
-          portrait,
-        }
-      }, (bool, res) => {
-        console.log(bool, res)
-        if (bool) {
-          wx.showToast({
-            title: '登陆成功',
-            icon: 'none',
-            duration: 500,
-          })
-          setTimeout(() => {
-            wx.navigateTo({
-              url: '../boxes/index'
-            })
-          }, 500);
-        } else {
-          wx.showToast({
-            title: '登录失败',
-            icon: 'none',
-            duration: 500,
-          })
-        }
-      })
-    })
+    this.setData(
+      {
+        userInfo,
+        hasUserInfo: true
+      },
+      () => {
+        request(
+          {
+            url: '/addUser',
+            method: 'POST',
+            data: {
+              userId: app.globalData.openId,
+              name,
+              portrait
+            }
+          },
+          (bool, res) => {
+            if (bool) {
+              wx.showToast({
+                title: '登陆成功',
+                icon: 'none',
+                duration: 500
+              })
+              setTimeout(() => {
+                wx.navigateTo({ url: '../boxes/index' })
+              }, 500)
+            } else {
+              wx.showToast({
+                title: '登录失败',
+                icon: 'none',
+                duration: 500
+              })
+            }
+          }
+        )
+      }
+    )
   }
 })

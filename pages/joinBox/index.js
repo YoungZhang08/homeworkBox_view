@@ -2,46 +2,45 @@ const app = getApp()
 const { request } = require('../../utils/request')
 
 Page({
-  data: {
-    boxId: '',
-  },
+  data: { boxId: '' },
+
   // 实时更新id
-  bindBoxId: function (e) {
-    this.setData({
-      boxId: e.detail.value
-    })
+  bindBoxId: function(e) {
+    this.setData({ boxId: e.detail.value })
   },
+
   // 创建盒子
-  addBox: function () {
+  addBox: function() {
     const { boxId } = this.data
-    request({
-      url: '/addUserBox',
-      data: {
-        boxId,
-        userId: app.globalData.openId,
+
+    request(
+      {
+        url: '/addUserBox',
+        data: {
+          boxId,
+          userId: app.globalData.openId
+        },
+        method: 'POST'
       },
-      method: 'POST'
-    }, (bool, res) => {
-      if (bool) {
-        wx.showToast({
-          title: res.msg,
-          icon: 'success',
-          duration: 500,
-        })
-        setTimeout(() => {
-          wx.navigateTo({
-            url: '../boxes/index'
+      (bool, res) => {
+        if (bool) {
+          wx.showToast({
+            title: res.msg,
+            icon: 'success',
+            duration: 500
           })
-        }, 500);
-      } else {
-        wx.showToast({
-          title: '创建失败',
-          icon: 'none',
-          duration: 500,
-        })
+          setTimeout(() => {
+            wx.navigateTo({ url: '../boxes/index' })
+          }, 500)
+        } else {
+          wx.showToast({
+            title: '创建失败',
+            icon: 'none',
+            duration: 500
+          })
+        }
       }
-    })
+    )
   },
-  onLoad: function () {
-  }
+  onLoad: function() {}
 })

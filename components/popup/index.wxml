@@ -1,8 +1,8 @@
-<view class="hw-popup" hidden="{{flag}}">
+<view class="hw-popup" hidden="{{flag}}" bindtap="hidePopup">
   <view class='popup-container'>
     <view class="hw-popup-btn">
-      <navigator class="btn-create" bindtap='createBox' url='../../pages/createBox/index'>{{btn_create}}</navigator>
-      <navigator class="btn-add" bindtap='addBox' url='../../pages/joinBox/index'>{{btn_add}}</navigator>
+      <navigator class="btn-create" url='../../pages/createBox/index'>{{btnCreate}}</navigator>
+      <navigator class="btn-add" url='../../pages/joinBox/index'>{{btnAdd}}</navigator>
     </view>
   </view>
 </view>

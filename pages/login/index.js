@@ -1,6 +1,7 @@
 // index.js
 // 获取应用实例
 const { request } = require('../../utils/request')
+const { toast } = require('../../utils/toast')
 
 const app = getApp()
 
@@ -40,46 +41,38 @@ Page({
       })
     }
   },
-  getUserInfo: function(e) {
+  addUser: function(e) {
     const { userInfo } = e.detail
+
     const { nickName: name, avatarUrl: portrait } = userInfo
 
     app.globalData.userInfo = userInfo
+
+    //
     this.setData(
       {
         userInfo,
         hasUserInfo: true
       },
       () => {
-        request(
-          {
-            url: '/addUser',
-            method: 'POST',
-            data: {
-              userId: app.globalData.openId,
-              name,
-              portrait
-            }
-          },
-          (bool, res) => {
-            if (bool) {
-              wx.showToast({
-                title: '登陆成功',
-                icon: 'none',
-                duration: 500
-              })
-              setTimeout(() => {
-                wx.navigateTo({ url: '../boxes/index' })
-              }, 500)
-            } else {
-              wx.showToast({
-                title: '登录失败',
-                icon: 'none',
-                duration: 500
-              })
-            }
+        request({
+          pathName: '/addUser',
+          method: 'POST',
+          data: {
+            userId: app.globalData.openId,
+            name,
+            portrait
           }
-        )
+        })
+          .then(() => {
+            toast('登陆成功')
+            setTimeout(() => {
+              wx.navigateTo({ url: '../boxes/index' })
+            }, 500)
+          })
+          ['catch'](err => {
+            toast(err.msg)
+          })
       }
     )
   }

@@ -1,20 +1,22 @@
-const request = ({ data, method, url, header }, cb) => {
-  wx.request({
-    url: `http://127.0.0.1:8000/homework${url}`,
-    data,
-    method,
-    header,
-    dataType: 'json',
-    success: res => {
-      if (200 <= res.data.status && 300 > res.data.status) {
-        cb(true, res.data)
-      } else {
-        cb(false, res.data)
+const request = ({ data, method, url = 'http://127.0.0.1:8000/homework', pathName, header }) => {
+  return new Promise((resolve, reject) => {
+    wx.request({
+      url: `${url}${pathName}`,
+      data,
+      method,
+      header,
+      dataType: 'json',
+      success: res => {
+        if ((res.statusCode === 200 && !res.data.status) || (200 <= res.data.status && 300 > res.data.status)) {
+          resolve(res.data)
+        } else {
+          reject(res.data)
+        }
+      },
+      fail: err => {
+        reject(err)
       }
-    },
-    fail: err => {
-      cb(false, err)
-    }
+    })
   })
 }
 

@@ -15,13 +15,13 @@ Component({
     },
 
     // 弹窗列表文字
-    btn_create: {
+    btnCreate: {
       type: String,
       value: '创建盒子'
     },
 
     // 弹窗列表文字
-    btn_add: {
+    btnAdd: {
       type: String,
       value: '加入盒子'
     }
@@ -45,21 +45,21 @@ Component({
     // 展示弹框
     showPopup() {
       this.setData({ flag: !this.data.flag })
-    },
+    }
 
     /*
      * 内部私有方法建议以下划线开头
      * triggerEvent 用于触发事件
      */
-    createBox() {
+    // createBox() {
 
-      // 创建盒子回调
-      this.triggerEvent('create')
-    },
-    addBox() {
+    //   // 创建盒子回调
+    //   this.triggerEvent('create')
+    // },
+    // addBox() {
 
-      // 加入盒子回调
-      this.triggerEvent('add')
-    }
+    //   // 加入盒子回调
+    //   this.triggerEvent('add')
+    // }
   }
 })

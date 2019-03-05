@@ -24,7 +24,7 @@ module.exports = {
     // error; 禁止在循环中出现 await
     'no-await-in-loop': 2,
     // error; 不允许使用console进行代码调试
-    'no-console': 2,
+    'no-console': 1,
     // error; 不允许使用debugger进行代码调试
     'no-debugger': 2,
 
@@ -138,8 +138,8 @@ module.exports = {
     'require-await': 0,
     // error; 要求所有的 var 声明出现在它们所在的作用域顶部
     'vars-on-top': 2,
-    // warn; 推荐yoda表达式
-    yoda: [1, 'always'],
+    // // warn; 推荐yoda表达式
+    // yoda: [2, 'always'],
     // 需要约束 for-in
     'guard-for-in': 2,
 

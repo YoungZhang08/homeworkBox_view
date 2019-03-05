@@ -1,70 +1,65 @@
 // index.js
 // 获取应用实例
 const { request } = require('../../utils/request')
+const { toast } = require('../../utils/toast')
 
 const app = getApp()
 
 Page({
-  data: {title: '作业盒子'},
+  data: {
+    title: '作业盒子',
+    list: null
+  },
   onReady: function() {
     this.popup = this.selectComponent('.popup')
   },
   showPopup() {
     this.popup.showPopup()
   },
-  createBox() {
 
-    // console.log('创建盒子')
-    this.popup.hidePopup()
-  },
-  addBox() {
+  // createBox() {
 
-    // console.log('加入盒子')
-    this.popup.hidePopup()
-  },
+  //   // console.log('创建盒子')
+  //   this.popup.hidePopup()
+  // },
+  // addBox() {
+
+  //   // console.log('加入盒子')
+  //   this.popup.hidePopup()
+  // },
 
   // 获取加入的盒子
   getAddBoxes: function() {
-    request(
-      {
-        url: '/getAddBoxes',
-        method: 'GET',
-        data: {userId: app.globalData.openId}
-      },
-      (bool, res) => {
-        if (bool) {
-          this.setData({msg1: res.msg})
-        } else {
-          wx.showToast({
-            title: '获取失败',
-            icon: 'none',
-            duration: 500
-          })
+    request({
+      pathName: '/getAddBoxes',
+      method: 'GET',
+      data: { userId: app.globalData.openId }
+    })
+      .then(data => {
+        if (data.data) {
+          this.setData({ list: data.data })
         }
-      }
-    )
+      })
+      ['catch'](err => {
+        toast()
+      })
   },
 
   // 获取自己创建的盒子
   getCreateBoxes: function() {
-    request(
-      {
-        url: '/getBoxes',
-        data: {createId: app.globalData.openId},
-        method: 'GET'
-      },
-      (bool, res) => {
-        if (bool) {
-          this.setData({msg: res.msg})
-        } else {
-          wx.showToast({
-            title: '登录失败',
-            icon: 'none',
-            duration: 500
-          })
+    request({
+      pathName: '/getBoxes',
+      data: { createId: app.globalData.openId },
+      method: 'GET'
+    })
+      .then(data => {
+        if (data.data) {
+          this.setData({ list: data.data })
         }
-      }
-    )
+      })
+      ['catch'](err => {
+        toast()
+      })
   },
   onLoad: function() {
     this.getCreateBoxes()

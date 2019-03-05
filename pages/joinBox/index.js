@@ -1,5 +1,6 @@
 const app = getApp()
 const { request } = require('../../utils/request')
+const { toast } = require('../../utils/toast')
 
 Page({
   data: { boxId: '' },
@@ -13,34 +14,26 @@ Page({
   addBox: function() {
     const { boxId } = this.data
 
-    request(
-      {
-        url: '/addUserBox',
-        data: {
-          boxId,
-          userId: app.globalData.openId
-        },
-        method: 'POST'
+    request({
+      pathName: '/addUserBox',
+      data: {
+        boxId,
+        userId: app.globalData.openId
       },
-      (bool, res) => {
-        if (bool) {
-          wx.showToast({
-            title: res.msg,
-            icon: 'success',
-            duration: 500
-          })
-          setTimeout(() => {
-            wx.navigateTo({ url: '../boxes/index' })
-          }, 500)
-        } else {
-          wx.showToast({
-            title: '创建失败',
-            icon: 'none',
-            duration: 500
-          })
-        }
-      }
-    )
+      method: 'POST'
+    })
+      .then(data => {
+        toast(data.msg, 'success')
+        setTimeout(() => {
+          wx.navigateBack({ delta: 1 })
+        }, 500)
+      })
+      ['catch'](err => {
+        toast()
+      })
   },
-  onLoad: function() {}
+  onLoad: function() {
+
+    //
+  }
 })

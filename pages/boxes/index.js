@@ -38,6 +38,8 @@ Page({
       .then(data => {
         if (data.data) {
           this.setData({ list: data.data })
+        } else {
+          this.setData({ list: null })
         }
       })
       ['catch'](err => {
@@ -55,6 +57,8 @@ Page({
       .then(data => {
         if (data.data) {
           this.setData({ list: data.data })
+        } else {
+          this.setData({ list: null })
         }
       })
       ['catch'](err => {

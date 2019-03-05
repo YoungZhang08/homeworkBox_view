@@ -55,7 +55,7 @@ Page({
       .then(data => {
         toast(data.msg, 'success')
         setTimeout(() => {
-          wx.navigateTo({ url: '../boxes/index' })
+          wx.navigateBack({ delta: 1 })
         }, 500)
       })
       ['catch'](err => {

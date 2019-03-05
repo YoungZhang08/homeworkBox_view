@@ -6,22 +6,23 @@
 
   <view class="boxes-tab">
     <view class="tab-left">
-      <navigator open-type="switchTab" url="../../components/boxesList/index">我创建的</navigator>
-      <navigator open-type="switchTab" url="../../components/boxesList/index">我加入的</navigator>
+      <button catchtap="getCreateBoxes">我创建的</button>
+      <button catchtap="getAddBoxes">我加入的</button>
     </view>
     <view class="tab-right">
         <image bindtap='showPopup' src="/images/add.png" />
     </view>
     <popup class="popup"
-      btn_create="创建盒子"
-      btn_add="加入盒子"
-      bind:create="createBox"
-      bind:add="addBox"
+      btnCreate="创建盒子"
+      btnAdd="加入盒子"
     >
     </popup>
   </view>
 
-  <view class='boxes-list'>
+  <view class='boxes-list' wx:if="{{list}}">
     <boxesList list="{{list}}"></boxesList>
+  </view>
+  <view wx:else>
+    <text class="">屁都没有</text>
   </view>
 </view>

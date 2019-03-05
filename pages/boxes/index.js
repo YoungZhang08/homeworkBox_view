@@ -1,72 +1,71 @@
-//index.js
-//获取应用实例
+// index.js
+// 获取应用实例
 const { request } = require('../../utils/request')
+const { toast } = require('../../utils/toast')
 
 const app = getApp()
 
 Page({
   data: {
     title: '作业盒子',
+    list: null
   },
-  onReady: function() {
+  onReady: function () {
     this.popup = this.selectComponent('.popup')
   },
   showPopup() {
     this.popup.showPopup()
   },
-  createBox() {
-    this.popup.hidePopup()
-  },
-  addBox() {
-    this.popup.hidePopup()
-  },
-  //获取加入的盒子
-  getAddBoxes: function() {
+
+  // createBox() {
+
+  //   // console.log('创建盒子')
+  //   this.popup.hidePopup()
+  // },
+  // addBox() {
+
+  //   // console.log('加入盒子')
+  //   this.popup.hidePopup()
+  // },
+
+  // 获取加入的盒子
+  getAddBoxes: function () {
     request({
-      url: '/getAddBoxes',
+      pathName: '/getAddBoxes',
       method: 'GET',
-      data: {
-        userId: app.globalData.openId,
-      }
-    }, (bool, res) => {
-      console.log(bool, res)
-      if (bool) {
-        this.setData({
-          msg1: res.msg,
-        })
-      } else {
-        wx.showToast({
-          title: '获取失败',
-          icon: 'none',
-          duration: 500,
-        })
-      }
+      data: { userId: app.globalData.openId }
+    })
+      .then(data => {
+        if (data.data) {
+          this.setData({ list: data.data })
+        } else {
+          this.setData({ list: null })
+        }
+      })
+    ['catch'](err => {
+      toast()
     })
   },
+
   // 获取自己创建的盒子
-  getCreateBoxes: function() {
+  getCreateBoxes: function () {
     request({
-      url: '/getBoxes',
-      data: {
-        createId: app.globalData.openId,
-      },
-      method: 'GET',
-    }, (bool, res) => {
-      console.log(bool, res)
-      if (bool) {
-        this.setData({
-          msg: res.msg,
-        })
-      } else {
-        wx.showToast({
-          title: '登录失败',
-          icon: 'none',
-          duration: 500,
-        })
-      }
+      pathName: '/getBoxes',
+      data: { createId: app.globalData.openId },
+      method: 'GET'
+    })
+      .then(data => {
+        if (data.data) {
+          this.setData({ list: data.data })
+        } else {
+          this.setData({ list: null })
+        }
+      })
+    ['catch'](err => {
+      toast()
     })
   },
   onLoad: function () {
     this.getCreateBoxes()
-  },
+  }
 })

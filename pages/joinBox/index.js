@@ -1,47 +1,39 @@
 const app = getApp()
 const { request } = require('../../utils/request')
+const { toast } = require('../../utils/toast')
 
 Page({
-  data: {
-    boxId: '',
-  },
+  data: { boxId: '' },
+
   // 实时更新id
   bindBoxId: function (e) {
-    this.setData({
-      boxId: e.detail.value
-    })
+    this.setData({ boxId: e.detail.value })
   },
-  // 加入盒子
+
+  // 创建盒子
   addBox: function () {
     const { boxId } = this.data
+
     request({
-      url: '/addUserBox',
+      pathName: '/addUserBox',
       data: {
         boxId,
-        userId: app.globalData.openId,
+        userId: app.globalData.openId
       },
       method: 'POST'
-    }, (bool, res) => {
-      if (bool) {
-        wx.showToast({
-          title: res.msg,
-          icon: 'success',
-          duration: 500,
-        })
+    })
+      .then(data => {
+        toast(data.msg, 'success')
         setTimeout(() => {
-          wx.navigateTo({
-            url: '../boxes/index'
-          })
-        }, 500);
-      } else {
-        wx.showToast({
-          title: '加入失败',
-          icon: 'none',
-          duration: 500,
-        })
-      }
+          wx.navigateBack({ delta: 1 })
+        }, 500)
+      })
+    ['catch'](err => {
+      toast()
     })
   },
   onLoad: function () {
+
+    //
   }
 })

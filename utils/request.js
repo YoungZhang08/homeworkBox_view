@@ -1,24 +1,23 @@
-const request = ({data, method, url, header}, cb) => {
-  wx.request({
-    url: `http://127.0.0.1:8000/homework${url}`,
-    data,
-    method,
-    header,
-    dataType: 'json',
-    success: res => {
-      const { data } = res
-      if (data.status >= 200 && data.status < 300 ) {
-        cb(true, data)
-      } else {
-        cb(false, data)
+const request = ({ data, method, url = 'http://127.0.0.1:8000/homework', pathName, header }) => {
+  return new Promise((resolve, reject) => {
+    wx.request({
+      url: `${url}${pathName}`,
+      data,
+      method,
+      header,
+      dataType: 'json',
+      success: res => {
+        if ((res.statusCode === 200 && !res.data.status) || (200 <= res.data.status && 300 > res.data.status)) {
+          resolve(res.data)
+        } else {
+          reject(res.data)
+        }
+      },
+      fail: err => {
+        reject(err)
       }
-    },
-    fail: err => {
-      cb(false, err)
-    }
+    })
   })
 }
 
-module.exports = {
-  request,
-}
+module.exports = { request }

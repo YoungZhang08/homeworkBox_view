@@ -15,6 +15,6 @@
   </view>
 
   <view wx:if="{{!hasUserInfo && canIUse}}" class='signup'>
-    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">使用微信授权登录</button>
+    <button open-type="getUserInfo" bindgetuserinfo="addUser">使用微信授权登录</button>
   </view>
 </view>

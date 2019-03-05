@@ -51,6 +51,7 @@ Page({
       },
       method: 'POST'
     }, (bool, res) => {
+      console.log(bool, res)
       if (bool) {
         wx.showToast({
           title: res.msg,

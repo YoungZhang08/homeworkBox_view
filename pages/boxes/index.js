@@ -15,11 +15,9 @@ Page({
     this.popup.showPopup()
   },
   createBox() {
-    // console.log('创建盒子')
     this.popup.hidePopup()
   },
   addBox() {
-    // console.log('加入盒子')
     this.popup.hidePopup()
   },
   //获取加入的盒子
@@ -31,6 +29,7 @@ Page({
         userId: app.globalData.openId,
       }
     }, (bool, res) => {
+      console.log(bool, res)
       if (bool) {
         this.setData({
           msg1: res.msg,
@@ -53,6 +52,7 @@ Page({
       },
       method: 'GET',
     }, (bool, res) => {
+      console.log(bool, res)
       if (bool) {
         this.setData({
           msg: res.msg,

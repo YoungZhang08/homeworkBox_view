@@ -11,7 +11,7 @@ Page({
       boxId: e.detail.value
     })
   },
-  // 创建盒子
+  // 加入盒子
   addBox: function () {
     const { boxId } = this.data
     request({
@@ -35,7 +35,7 @@ Page({
         }, 500);
       } else {
         wx.showToast({
-          title: '创建失败',
+          title: '加入失败',
           icon: 'none',
           duration: 500,
         })

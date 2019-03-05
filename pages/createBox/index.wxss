@@ -22,7 +22,7 @@ page{
   margin-top: 30rpx;
   width: 100%;
   height: 60rpx;
-  font-size: 20rpx;
+  font-size: 25rpx;
   text-indent: 10rpx;
   background-color: white;
 }

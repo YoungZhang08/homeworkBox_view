@@ -10,7 +10,7 @@
       <button catchtap="getAddBoxes">我加入的</button>
     </view>
     <view class="tab-right">
-        <image bindtap='showPopup' src="/images/add.png" />
+      <image bindtap='showPopup' src="/images/add.png" />
     </view>
     <popup class="popup"
       btnCreate="创建盒子"

@@ -33,12 +33,17 @@
   justify-content: space-between;
   margin-top: 50rpx;
 }
-.tab-left navigator {
+.tab-left button {
   display: inline-block;
+  text-align: center;
+  line-height: 48rpx;
   width: 128rpx;
   height: 48rpx;
-  font-weight: bold;
   font-size: 32rpx;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  border: none !important;
 }
 .tab-right {
   width: 50rpx;

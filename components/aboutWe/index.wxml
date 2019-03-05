@@ -6,8 +6,8 @@
   </view>
 
   <view class="aboutwe-bottom">
-      <navigator class="aboutwe-operation" open-type="navigate" url="../operation/index">操作手册</navigator>
-      <navigator class="aboutwe-feedback" open-type="navigate" url="../feedback/index">反馈建议</navigator>
+    <navigator class="aboutwe-operation" open-type="navigate" url="../operation/index">操作手册</navigator>
+    <navigator class="aboutwe-feedback" open-type="navigate" url="../feedback/index">反馈建议</navigator>
   </view>
 
 </view>

@@ -8,7 +8,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    title: '作业消息',
+    title: null,
+    text: null,
+    deadline: null,
     list: null
   },
 
@@ -22,8 +24,13 @@ Page({
       .then(data => {
         //console.log(data)
         if (data.data) {
-          //console.log(data.data)
+          console.log(data.data)
           this.setData({ list: data.data })
+          // this.setData({
+          //   title: data.data.title,
+          //   text: data.data.text,
+          //   deadline: data.data.deadline
+          // })
         } else {
           this.setData({ list: null })
         }

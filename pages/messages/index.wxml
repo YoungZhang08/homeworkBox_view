@@ -1,6 +1,6 @@
 <!--pages/messages/index.wxml-->
 <view class='message' wx:if="{{list}}">
-  <navigator class='message-list' wx:for="{{list}}" wx:key="index" url='../homeworkDetail/index' open-type='navigate' hover-class="none">
+  <navigator class='message-list' wx:for="{{list}}" wx:key="index" url='../homeworkDetail/index?title={{item.title}}&text={{item.text}}&deadline={{item.deadline}}' open-type='navigate' hover-class="none">
     <view class='list-info'>
       <view class='list-img'>
         <image src='../../images/logo.png'></image>

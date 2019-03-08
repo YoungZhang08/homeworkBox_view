@@ -1,9 +1,15 @@
 <!--pages/homeworkDetail.wxml-->
 <view class='detail'>
-  <text class="detail-title">作业名称：</text>
-  <text class="detail-info">{{}}</text>
-  <text class="detail-title">作业内容：</text>
-  <text class="detail-info">{{}}</text>
-  <text class="detail-title">上交时间：</text>
-  <text class="detail-info">{{}}</text>
+  <view class='detail-box'>
+    <text class="detail-title">作业名称：</text>
+    <text class="detail-info">{{title}}</text>
+  </view>
+  <view class='detail-box'>
+    <text class="detail-title">作业内容：</text>
+    <text class="detail-info">{{text}}</text>
+  </view>
+  <view class='detail-box'>
+    <text class="detail-title">上交时间：</text>
+    <text class="detail-info">{{deadline}}</text>
+  </view>
 </view>

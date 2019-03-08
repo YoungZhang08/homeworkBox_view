@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "关于我们",
-  "component": true,
-  "usingComponents": {
-    "operation": "../operation/index",
-    "feedback": "../feedback/index"
-  }
-}

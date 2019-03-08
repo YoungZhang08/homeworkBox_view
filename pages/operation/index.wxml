@@ -1,3 +1,4 @@
+<!-- operation.wxml -->
 <view class='operation'>
   <view class='operation-list'>
     <text>1. 如何设置个性化提醒</text>

@@ -1,4 +1,4 @@
-// pages/messages/index.js
+// pages/homeworkDetail.js
 const { request } = require('../../utils/request')
 const app = getApp()
 
@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    title: '作业消息',
+    title: '作业详情',
     list: null
   },
 
@@ -20,9 +20,9 @@ Page({
       method: 'GET'
     })
       .then(data => {
-        //console.log(data)
+        console.log(data)
         if (data.data) {
-          //console.log(data.data)
+          console.log(data.data)
           this.setData({ list: data.data })
         } else {
           this.setData({ list: null })
@@ -35,6 +35,5 @@ Page({
 
   onLoad: function () {
     this.getHomework()
-    //console.log(this.getHomework())
   }
 })

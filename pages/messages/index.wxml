@@ -1,2 +1,17 @@
 <!--pages/messages/index.wxml-->
-<text>pages/messages/index.wxml</text>
+<view class='message' wx:if="{{list}}">
+  <navigator class='message-list' wx:for="{{list}}" wx:key="index" url='../homeworkDetail/index' open-type='navigate' hover-class="none">
+    <view class='list-info'>
+      <view class='list-img'>
+        <image src='../../images/logo.png'></image>
+      </view>
+      <view class='list-infobox'>
+        <text>{{item.boxId}}</text>
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+  </navigator>
+</view>
+<view wx:else>
+  <text>啥都没有！</text>
+</view>

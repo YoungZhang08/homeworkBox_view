@@ -1,4 +1,4 @@
-<!--components/aboutWe/index.wxml-->
+<!-- aboutWe.wxml -->
 <view class="aboutwe">
   <view class="aboutwe-top">
     <image src="/images/homework_logo.png" />

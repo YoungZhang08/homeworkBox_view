@@ -1,38 +1,47 @@
 {
-  "pages":[
+  "pages": [
     "pages/login/index",
     "pages/boxes/index",
     "pages/messages/index",
     "pages/users/index",
     "pages/createBox/index",
-    "pages/joinBox/index"
+    "pages/joinBox/index",
+    "pages/aboutWe/index",
+    "pages/sources/index",
+    "pages/feedback/index",
+    "pages/operation/index",
+    "pages/homeworkDetail/index"
   ],
   "tabBar": {
     "color": "#e4e4e4",
     "selectedColor": "#73bdf6",
     "backgroundColor": "#fff",
     "borderStyle": "white",
-    "list": [{
-      "pagePath": "pages/boxes/index",
-      "text": "盒子",
-      "iconPath": "images/boxes.png",
-      "selectedIconPath": "images/boxes_active.png"
-    }, {
-      "pagePath": "pages/messages/index",
-      "text": "消息",
-      "iconPath": "images/messages.png",
-      "selectedIconPath": "images/messages_active.png"
-    }, {
-      "pagePath": "pages/users/index",
-      "text": "我",
-      "iconPath": "images/users.png",
-      "selectedIconPath": "images/users_active.png"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/boxes/index",
+        "text": "盒子",
+        "iconPath": "images/boxes.png",
+        "selectedIconPath": "images/boxes_active.png"
+      },
+      {
+        "pagePath": "pages/messages/index",
+        "text": "消息",
+        "iconPath": "images/messages.png",
+        "selectedIconPath": "images/messages_active.png"
+      },
+      {
+        "pagePath": "pages/users/index",
+        "text": "我",
+        "iconPath": "images/users.png",
+        "selectedIconPath": "images/users_active.png"
+      }
+    ]
   },
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   }
 }

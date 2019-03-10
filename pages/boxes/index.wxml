@@ -4,20 +4,26 @@
     <image src="/images/home_back.png" />
   </view>
   <view class='box-content'>
-      <view class='box-tab'>
+    <view class='box-tab'>
+      <view class="tab-left">
         <tab class="tab"
           tab1="我创建的"
           tab2="我加入的"
         >
         </tab>
+      </view>  
+      <view class="tab-right" bindtap='showPopup'>
+        <image src="/images/add.png" />
       </view>
-      <view class='box-popup' bindtap='showPopup'>
+      <view class='box-popup'>
         <popup class="popup"
           btnTop="创建盒子"
           btnBottom="加入盒子"
         >
         </popup>
       </view>
+    </view>
+    
   </view>
 
   <view class='boxes-list' wx:if="{{list}}">

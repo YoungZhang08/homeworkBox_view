@@ -14,8 +14,5 @@ Component({
       type: String,
       value: ''
     },
-  },
-
-  methods: {
   }
 })

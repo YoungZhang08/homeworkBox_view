@@ -1,11 +1,6 @@
 <!--components/boxContentTab/index.wxml-->
 <view class='hw-boxcontent-tab'>
-  <view class="tab-left">
-    <button catchtap="getCreateBoxes">{{tab1}}</button>
-    <button catchtap="getAddBoxes">{{tab2}}</button>
-  </view>
-  <view class="tab-right">
-    <image src="/images/add.png" />
-  </view>
+  <button catchtap="getCreateBoxes">{{tab1}}</button>
+  <button catchtap="getAddBoxes">{{tab2}}</button>
 </view>
 

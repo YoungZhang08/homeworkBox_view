@@ -7,20 +7,15 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    // 弹窗内容
-    content: {
+    // 弹窗列表文字
+    btnTop: {
       type: String,
-      value: '内容'
+      value: ''
     },
     // 弹窗列表文字
-    btnCreate: {
+    btnBottom: {
       type: String,
-      value: '创建盒子'
-    },
-    // 弹窗列表文字
-    btnAdd: {
-      type: String,
-      value: '加入盒子'
+      value: ''
     }
   },
 

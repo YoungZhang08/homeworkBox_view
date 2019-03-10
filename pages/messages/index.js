@@ -26,11 +26,6 @@ Page({
         if (data.data) {
           console.log(data.data)
           this.setData({ list: data.data })
-          // this.setData({
-          //   title: data.data.title,
-          //   text: data.data.text,
-          //   deadline: data.data.deadline
-          // })
         } else {
           this.setData({ list: null })
         }

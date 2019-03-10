@@ -3,20 +3,21 @@
   <view class="boxes-back">
     <image src="/images/home_back.png" />
   </view>
-
-  <view class="boxes-tab">
-    <view class="tab-left">
-      <button catchtap="getCreateBoxes">我创建的</button>
-      <button catchtap="getAddBoxes">我加入的</button>
-    </view>
-    <view class="tab-right">
-      <image bindtap='showPopup' src="/images/add.png" />
-    </view>
-    <popup class="popup"
-      btnCreate="创建盒子"
-      btnAdd="加入盒子"
-    >
-    </popup>
+  <view class='box-content'>
+      <view class='box-tab'>
+        <tab class="tab"
+          tab1="我创建的"
+          tab2="我加入的"
+        >
+        </tab>
+      </view>
+      <view class='box-popup' bindtap='showPopup'>
+        <popup class="popup"
+          btnTop="创建盒子"
+          btnBottom="加入盒子"
+        >
+        </popup>
+      </view>
   </view>
 
   <view class='boxes-list' wx:if="{{list}}">

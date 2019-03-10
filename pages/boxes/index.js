@@ -14,6 +14,7 @@ Page({
     this.popup = this.selectComponent('.popup')
   },
   showPopup() {
+    // console.log(this.popup)
     this.popup.showPopup()
   },
   // 获取加入的盒子

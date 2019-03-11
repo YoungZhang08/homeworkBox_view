@@ -6,40 +6,40 @@ Page({
   data: {
     boxId: '',
     course: '',
-    className: ''
+    className: '',
   },
 
   // 实时更新课程名称
-  bindCourse: function (e) {
+  bindCourse(e) {
     this.setData({ course: e.detail.value })
   },
 
   // 实时更新班级名称
-  bindClassName: function (e) {
+  bindClassName(e) {
     this.setData({ className: e.detail.value })
   },
 
   // 实时更新id
-  bindBoxId: function (e) {
+  bindBoxId(e) {
     this.setData({ boxId: e.detail.value })
   },
 
   // 获取随机id
-  getRandom: function () {
+  getRandom() {
     request({
       pathName: '/getRandom',
-      method: 'GET'
+      method: 'GET',
     })
-      .then(data => {
+      .then((data) => {
         this.setData({ boxId: data.id })
       })
-    ['catch'](err => {
-      toast()
-    })
+      .catch((err) => {
+        toast()
+      })
   },
 
   // 创建盒子
-  createBox: function () {
+  createBox() {
     const { boxId, course, className } = this.data
 
     request({
@@ -48,21 +48,21 @@ Page({
         boxId,
         createId: app.globalData.openId,
         course,
-        className
+        className,
       },
-      method: 'POST'
+      method: 'POST',
     })
-      .then(data => {
+      .then((data) => {
         toast(data.msg, 'success')
         setTimeout(() => {
           wx.navigateBack({ delta: 1 })
         }, 500)
       })
-    ['catch'](err => {
-      toast('创建失败')
-    })
+      .catch((err) => {
+        toast('创建失败')
+      })
   },
-  onLoad: function () {
+  onLoad() {
     this.getRandom()
-  }
+  },
 })

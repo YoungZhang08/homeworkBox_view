@@ -1,8 +1,9 @@
 {
   "navigationBarTitleText": "作业盒子",
   "usingComponents": {
-    "tab": "../../components/tab/index",
-    "popup": "../../components/popup/index",
+    "Tab": "../../components/tab/index",
+    "Btn": "../../components/button/index",
+    "Popup": "../../components/popup/index",
     "boxlist": "../../components/boxlist/index"
   }
 }

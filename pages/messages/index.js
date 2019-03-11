@@ -1,5 +1,6 @@
 // pages/messages/index.js
 const { request } = require('../../utils/request')
+
 const app = getApp()
 
 Page({
@@ -11,18 +12,18 @@ Page({
     title: null,
     text: null,
     deadline: null,
-    list: null
+    list: null,
   },
 
   // 获取自己的消息列表
-  getHomework: function () {
+  getHomework() {
     request({
       pathName: '/getHomework',
       data: { userId: app.globalData.openId },
-      method: 'GET'
+      method: 'GET',
     })
-      .then(data => {
-        //console.log(data)
+      .then((data) => {
+        // console.log(data)
         if (data.data) {
           console.log(data.data)
           this.setData({ list: data.data })
@@ -30,13 +31,14 @@ Page({
           this.setData({ list: null })
         }
       })
-    ['catch'](err => {
-      toast()
-    })
+      .catch((err) => {
+        toast()
+      })
   },
 
-  onLoad: function () {
+  onLoad() {
     this.getHomework()
-    //console.log(this.getHomework())
-  }
+
+    // console.log(this.getHomework())
+  },
 })

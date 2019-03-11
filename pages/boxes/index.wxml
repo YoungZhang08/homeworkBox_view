@@ -1,35 +1,16 @@
-<!-- boxes.wxml -->
+<!-- 登陆进来的主界面 -->
 <view class="boxes">
-  <view class="boxes-back">
-    <image src="/images/home_back.png" />
-  </view>
-  <view class='box-content'>
-    <view class='box-tab'>
-      <view class="tab-left">
-        <tab class="tab"
-          tab1="我创建的"
-          tab2="我加入的"
-        >
-        </tab>
-      </view>  
-      <view class="tab-right" bindtap='showPopup'>
-        <image src="/images/add.png" />
-      </view>
-      <view class='box-popup'>
-        <popup class="popup"
-          btnTop="创建盒子"
-          btnBottom="加入盒子"
-        >
-        </popup>
-      </view>
-    </view>
-    
-  </view>
-
+  <image class="back" src="/images/home_back.png" />
+  <Tab class="tab">
+    <Btn slot="btn" bind:clickListen="getAddBoxes" textContent="我创建的" />
+    <Btn slot="btn" bind:clickListen="getCreateBoxes" textContent="我加入的" />
+    <image slot="image" catch:tap="showPopup" src="/images/add.png" />
+  </Tab>
   <view class='boxes-list' wx:if="{{list}}">
     <boxesList list="{{list}}"></boxesList>
   </view>
   <view wx:else>
     <text class="">屁都没有</text>
   </view>
+  <Popup id="popup" textContent="{{popupContent}}" urlList="{{popupUrl}}" />
 </view>

@@ -1,0 +1,1 @@
+<button size="mini" plain="{{true}}" class="btn" bindtap="click">{{textContent}}</button>

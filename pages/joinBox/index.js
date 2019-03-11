@@ -6,34 +6,34 @@ Page({
   data: { boxId: '' },
 
   // 实时更新id
-  bindBoxId: function (e) {
+  bindBoxId(e) {
     this.setData({ boxId: e.detail.value })
   },
 
   // 创建盒子
-  addBox: function () {
+  addBox() {
     const { boxId } = this.data
 
     request({
       pathName: '/addUserBox',
       data: {
         boxId,
-        userId: app.globalData.openId
+        userId: app.globalData.openId,
       },
-      method: 'POST'
+      method: 'POST',
     })
-      .then(data => {
+      .then((data) => {
         toast(data.msg, 'success')
         setTimeout(() => {
           wx.navigateBack({ delta: 1 })
         }, 500)
       })
-    ['catch'](err => {
-      toast()
-    })
+      .catch((err) => {
+        toast()
+      })
   },
-  onLoad: function () {
+  onLoad() {
 
     //
-  }
+  },
 })

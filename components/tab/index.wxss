@@ -1,21 +1,21 @@
-/* components/boxContentTab/index.wxss */
-.hw-boxcontent-tab {
+.content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 120rpx;
+  padding: 0 30rpx;
+  border-bottom: 0.5px solid #f4f5f6;
 }
-.hw-boxcontent-tab button {
-  display: inline-block;
-  text-align: center;
-  line-height: 48rpx;
-  width: 128rpx;
-  height: 48rpx;
-  font-size: 32rpx;
-  margin: 0;
-  padding: 0;
-  border-radius: 0;
-  background-color: #fff;
-  /* border-bottom: 1px solid #73bdf6; */
+.left {
+  flex-grow: 1;
 }
-.hw-boxcontent-tab button::after{ 
-  border: none; 
+.right {
+  flex-shrink: 0;
+  width: 50rpx;
+  height: 50rpx;
+}
+.right image {
+  width: 100%;
+  height: 100%;
 }

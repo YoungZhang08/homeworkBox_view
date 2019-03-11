@@ -1,6 +1,8 @@
-<!--components/boxContentTab/index.wxml-->
-<view class='hw-boxcontent-tab'>
-  <button catchtap="getCreateBoxes">{{tab1}}</button>
-  <button catchtap="getAddBoxes">{{tab2}}</button>
+<view class='content flex'>
+  <view class="left">
+    <slot name="btn"></slot>
+  </view>
+  <view class="right">
+    <slot name="image"></slot>
+  </view>
 </view>
-

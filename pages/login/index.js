@@ -9,39 +9,37 @@ Page({
   data: {
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
   },
-  onLoad: function() {
+  onLoad() {
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
-        hasUserInfo: true
+        hasUserInfo: true,
       })
     } else if (this.data.canIUse) {
-
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
       // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
+      app.userInfoReadyCallback = (res) => {
         this.setData({
           userInfo: res.userInfo,
-          hasUserInfo: true
+          hasUserInfo: true,
         })
       }
     } else {
-
       // 在没有 open-type=getUserInfo 版本的兼容处理
       wx.getUserInfo({
-        success: res => {
+        success: (res) => {
           app.globalData.userInfo = res.userInfo
           this.setData({
             userInfo: res.userInfo,
-            hasUserInfo: true
+            hasUserInfo: true,
           })
-        }
+        },
       })
     }
   },
-  addUser: function(e) {
+  addUser(e) {
     const { userInfo } = e.detail
 
     const { nickName: name, avatarUrl: portrait } = userInfo
@@ -52,7 +50,7 @@ Page({
     this.setData(
       {
         userInfo,
-        hasUserInfo: true
+        hasUserInfo: true,
       },
       () => {
         request({
@@ -61,8 +59,8 @@ Page({
           data: {
             userId: app.globalData.openId,
             name,
-            portrait
-          }
+            portrait,
+          },
         })
           .then(() => {
             toast('登陆成功')
@@ -70,10 +68,10 @@ Page({
               wx.navigateTo({ url: '../boxes/index' })
             }, 500)
           })
-          ['catch'](err => {
+          .catch((err) => {
             toast(err.msg)
           })
-      }
+      },
     )
-  }
+  },
 })

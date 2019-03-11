@@ -1,5 +1,6 @@
 // pages/homeworkDetail.js
 const { request } = require('../../utils/request')
+
 const app = getApp()
 
 Page({
@@ -10,14 +11,14 @@ Page({
   data: {
     title: '',
     text: '',
-    deadline: ''
+    deadline: '',
   },
 
-  onLoad: function (options) {
+  onLoad(options) {
     this.setData({
       title: options.title,
       text: options.text,
-      deadline: options.deadline
+      deadline: options.deadline,
     })
-  }
+  },
 })

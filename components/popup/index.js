@@ -1,5 +1,4 @@
 Component({
-
   // 在组件定义时的选项中启用多slot支持
   options: { multipleSlots: true },
 
@@ -7,16 +6,14 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    // 弹窗列表文字
-    btnTop: {
-      type: String,
-      value: ''
+    textContent: {
+      type: Array,
+      value: [],
     },
-    // 弹窗列表文字
-    btnBottom: {
-      type: String,
-      value: ''
-    }
+    urlList: {
+      type: Array,
+      value: [],
+    },
   },
 
   /**
@@ -28,13 +25,18 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    jump(e) {
+      const { url } = e.currentTarget.dataset
+      this.hidePopup()
+      wx.navigateTo({ url })
+    },
     // 隐藏弹框
-    hidePopup: function () {
+    hidePopup() {
       this.setData({ flag: !this.data.flag })
     },
     // 展示弹框
     showPopup() {
       this.setData({ flag: !this.data.flag })
-    }
-  }
+    },
+  },
 })

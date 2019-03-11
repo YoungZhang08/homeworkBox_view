@@ -8,53 +8,53 @@ const app = getApp()
 Page({
   data: {
     title: '作业盒子',
-    list: null
+    list: null,
+    popupContent: ['创建盒子', '加入盒子'],
+    popupUrl: ['../../pages/createBox/index', '../../pages/joinBox/index'],
   },
-  onReady: function () {
-    this.popup = this.selectComponent('.popup')
+  onReady() {
+    this.popup = this.selectComponent('#popup')
   },
   showPopup() {
-    // console.log(this.popup)
     this.popup.showPopup()
   },
   // 获取加入的盒子
-  getAddBoxes: function () {
+  getAddBoxes() {
     request({
       pathName: '/getAddBoxes',
       method: 'GET',
-      data: { userId: app.globalData.openId }
+      data: { userId: app.globalData.openId },
     })
-      .then(data => {
+      .then((data) => {
         if (data.data) {
           this.setData({ list: data.data })
         } else {
           this.setData({ list: null })
         }
       })
-    ['catch'](err => {
-      toast()
-    })
+      .catch(() => {
+        toast()
+      })
   },
-
   // 获取自己创建的盒子
-  getCreateBoxes: function () {
+  getCreateBoxes() {
     request({
       pathName: '/getBoxes',
       data: { createId: app.globalData.openId },
-      method: 'GET'
+      method: 'GET',
     })
-      .then(data => {
+      .then((data) => {
         if (data.data) {
           this.setData({ list: data.data })
         } else {
           this.setData({ list: null })
         }
       })
-    ['catch'](err => {
-      toast()
-    })
+      .catch(() => {
+        toast()
+      })
   },
-  onLoad: function () {
+  onLoad() {
     this.getCreateBoxes()
-  }
+  },
 })

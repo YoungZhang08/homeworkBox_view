@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "创建盒子"
+  "navigationBarTitleText": "创建盒子",
+  "usingComponents": {
+    "Btn": "../../components/button/index"
+  }
 }

@@ -10,7 +10,7 @@ Page({
     title: '作业盒子',
     list: null,
     popupContent: ['创建盒子', '加入盒子'],
-    popupUrl: ['../../pages/createBox/index', '../../pages/joinBox/index'],
+    popupUrl: ['../createBox/index', '../joinBox/index'],
   },
   onReady() {
     this.popup = this.selectComponent('#popup')

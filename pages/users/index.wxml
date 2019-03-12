@@ -1,12 +1,9 @@
-<!--pages/users/index.wxml-->
+<!-- pages/users/index.wxml -->
 <view class="users">
-  <view class="users-top">
+  <view class="top">
     <image src="/images/boxlist_left.png" />
     <text>Youngzhang08</text>
   </view>
-
-  <view class="users-bottom">
-      <navigator class="users-source" open-type="navigate" url="../sources/index">我的资源</navigator>
-      <navigator class="users-about" open-type="navigate" url="../aboutWe/index">关于我们</navigator>
-  </view>
+  <navigator class="nav" open-type="navigate" url="../sources/index">我的资源</navigator>
+  <navigator class="nav" open-type="navigate" url="../aboutWe/index">关于我们</navigator>
 </view>

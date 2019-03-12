@@ -1,7 +1,9 @@
-/* .btn {
-  display: inline-block;
-  width: 128rpx;
-  height: 48rpx;
-  line-height: 48rpx;
-  border: 0;
-} */
+.btn {
+  width: 600rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 32rpx;
+  background-color: #73bdf6;
+  border-radius: 5rpx;
+  color: white;
+}

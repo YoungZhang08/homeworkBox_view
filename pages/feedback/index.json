@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "反馈建议"
+  "navigationBarTitleText": "反馈建议",
+  "usingComponents": {
+    "Btn": "../../components/button/index"
+  }
 }

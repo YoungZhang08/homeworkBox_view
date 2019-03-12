@@ -33,7 +33,7 @@ Page({
       .then((data) => {
         this.setData({ boxId: data.id })
       })
-      .catch((err) => {
+      .catch(() => {
         toast()
       })
   },
@@ -58,7 +58,7 @@ Page({
           wx.navigateBack({ delta: 1 })
         }, 500)
       })
-      .catch((err) => {
+      .catch(() => {
         toast('创建失败')
       })
   },

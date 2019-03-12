@@ -1,10 +1,10 @@
 // pages/messages/index.js
 const { request } = require('../../utils/request')
+const { toast } = require('../../utils/toast')
 
 const app = getApp()
 
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -31,7 +31,7 @@ Page({
           this.setData({ list: null })
         }
       })
-      .catch((err) => {
+      .catch(() => {
         toast()
       })
   },

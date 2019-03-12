@@ -8,7 +8,12 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } */
+page {
+  background-color: #eeeeee;
+}
 
-view {
+view,
+text,
+textarea {
   box-sizing: border-box;
 }

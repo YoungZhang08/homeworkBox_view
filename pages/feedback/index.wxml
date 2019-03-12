@@ -1,6 +1,6 @@
 <!-- feedback.wxml -->
-<view class="feedback">
+<view class="box">
   <text>请在下方输入您的反馈内容</text>
   <textarea name="" id="" cols="10" rows="30"></textarea>
-  <button type="submit">提交</button>
+  <Btn textContent="提交"></Btn>
 </view>

@@ -1,7 +1,7 @@
-<view class="join-box">
-  <view class='box-info'>
+<view class="join">
+  <view class='info'>
     <text>请输入盒子ID</text>
     <input type="text" value="{{boxId}}" bindinput="bindBoxId" focus="{{true}}" placeholder="如：76348" maxlength="5" />
   </view>
-  <button bindtap="addBox">加入盒子</button>
+  <Btn textContent="加入盒子" bind:clickListen="addBox"></Btn>
 </view>

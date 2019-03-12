@@ -1,20 +1,16 @@
-<view class="create-box">
-  <view class='box-info'>
+<view class="create">
+  <view class='info'>
     <text>请输入盒子ID(已为你自动生成^_^)</text>
     <input type="text" value="{{boxId}}" bindtap="bindBoxId" placeholder="如：55429" maxlength="5" />
   </view>
-
-  <button bindtap="getRandom" class='box-change'>换一个~</button>
-
-  <view class='box-info'>
+  <Btn bind:clickListen="getRandom" textContent="换一个～"></Btn>
+  <view class='info'>
     <text>请输入课程名称</text>
     <input type="text" value="{{course}}" bindinput="bindCourse" placeholder="如：大学物理" maxlength="40" />
   </view>
-
-  <view class='box-info'>
+  <view class='info'>
     <text>请输入班级名称</text>
     <input type="text" value="{{className}}" bindinput="bindClassName" placeholder="如：通工1502" maxlength="40" />
   </view>
-  
-  <button bindtap="createBox" class='box-create'>创建盒子</button>
+  <Btn bind:clickListen="createBox" textContent="创建盒子"></Btn>
 </view>

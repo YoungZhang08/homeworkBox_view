@@ -28,12 +28,11 @@ Page({
           wx.navigateBack({ delta: 1 })
         }, 500)
       })
-      .catch((err) => {
+      .catch(() => {
         toast()
       })
   },
   onLoad() {
-
     //
   },
 })

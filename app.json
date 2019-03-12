@@ -1,15 +1,15 @@
 {
   "pages": [
-    "pages/boxes/index",
-    "pages/login/index",
-    "pages/messages/index",
+    "pages/operation/index",
+    "pages/feedback/index",
+    "pages/aboutWe/index",
     "pages/users/index",
+    "pages/messages/index",
     "pages/createBox/index",
     "pages/joinBox/index",
-    "pages/aboutWe/index",
+    "pages/login/index",
+    "pages/boxes/index",
     "pages/sources/index",
-    "pages/feedback/index",
-    "pages/operation/index",
     "pages/homeworkDetail/index"
   ],
   "tabBar": {

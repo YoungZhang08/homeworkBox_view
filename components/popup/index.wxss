@@ -11,14 +11,15 @@
   border: 1px solid black;
 }
 .content {
-  width: 75%;
+  width: 70%;
   background: #fff;
 }
 .text {
-  display: inline-block;
-  width: 100%;
+  display: block;
+  width: 80%;
   height: 80rpx;
   line-height: 80rpx;
-  text-indent: 30rpx;
   font-size: 32rpx;
+  border-bottom: 1px solid #eeeeee;
+  margin: 0 auto;
 }

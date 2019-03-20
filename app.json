@@ -1,14 +1,14 @@
 {
   "pages": [
+    "pages/boxes/index",
     "pages/operation/index",
+    "pages/login/index",
     "pages/feedback/index",
     "pages/aboutWe/index",
     "pages/users/index",
     "pages/messages/index",
     "pages/createBox/index",
     "pages/joinBox/index",
-    "pages/login/index",
-    "pages/boxes/index",
     "pages/sources/index",
     "pages/homeworkDetail/index"
   ],

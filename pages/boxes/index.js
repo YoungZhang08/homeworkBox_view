@@ -20,12 +20,14 @@ Page({
   },
   // 获取加入的盒子
   getAddBoxes() {
+    console.log(111)
     request({
       pathName: '/getAddBoxes',
       method: 'GET',
       data: { userId: app.globalData.openId },
     })
       .then((data) => {
+        console.log(data.data)
         if (data.data) {
           this.setData({ list: data.data })
         } else {
@@ -44,6 +46,7 @@ Page({
       method: 'GET',
     })
       .then((data) => {
+        console.log(data.data)
         if (data.data) {
           this.setData({ list: data.data })
         } else {

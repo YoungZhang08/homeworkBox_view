@@ -11,8 +11,15 @@
   width: 450rpx;
   height: 438rpx;
 }
-/* .boxes-list {
-  width: 650rpx;
-  height: 120rpx;
+.nav {
+  width: 138rpx;
+  height: 48rpx;
+  margin-right: 50rpx;
+  padding-bottom: 12rpx;
+  border-bottom: 1px solid #73bdf6;
+}
+.boxes-list {
+  width: 100%;
+  height: auto;
   margin-top: 22rpx;
-} */
+}

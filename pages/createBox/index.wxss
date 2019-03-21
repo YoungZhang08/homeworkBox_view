@@ -17,3 +17,7 @@
   text-indent: 10rpx;
   background-color: white;
 }
+.btn {
+  width: 100%;
+  border: 1px solid black;
+}

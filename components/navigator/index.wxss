@@ -1,0 +1,4 @@
+.nav text {
+  /* width: 100%; */
+  font-size: 32rpx;
+}

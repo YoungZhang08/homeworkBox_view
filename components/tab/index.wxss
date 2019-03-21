@@ -4,7 +4,7 @@
   align-items: center;
   margin: 0 auto;
   height: 120rpx;
-  border-bottom: 1px solid #cccdce;
+  border-bottom: 1px solid #dfe0e2;
 }
 .left {
   flex-grow: 1;

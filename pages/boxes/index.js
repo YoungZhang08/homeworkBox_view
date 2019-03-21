@@ -20,7 +20,6 @@ Page({
   },
   // 获取加入的盒子
   getAddBoxes() {
-    console.log(111)
     request({
       pathName: '/getAddBoxes',
       method: 'GET',

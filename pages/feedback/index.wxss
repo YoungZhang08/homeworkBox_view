@@ -5,14 +5,14 @@
   width: 100%;
 }
 .box text {
-  width: 100%;
+  width: 80%;
   height: 32rpx;
   line-height: 32rpx;
-  padding: 40rpx 70rpx;
+  padding: 40rpx 0;
   font-size: 32rpx;
 }
 .box textarea {
-  width: 100%;
+  width: 80%;
   height: 300rpx;
   margin: 40rpx 70rpx;
   background-color: white;

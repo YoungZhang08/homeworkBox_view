@@ -8,7 +8,7 @@
 }
 .detail-box {
   width: 650rpx;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #cccaca;
   margin: 30rpx 0;
 }
 .detail-title {

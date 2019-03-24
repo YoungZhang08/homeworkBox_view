@@ -3,5 +3,5 @@
     <text>请输入盒子ID</text>
     <input type="text" value="{{boxId}}" bindinput="bindBoxId" focus="{{true}}" placeholder="如：76348" maxlength="5" />
   </view>
-  <Btn textContent="加入盒子" bind:clickListen="addBox"></Btn>
+  <Btn textContent="加入盒子" bind:clickListen="addBox" class="addBox"></Btn>
 </view>

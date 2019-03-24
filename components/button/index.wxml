@@ -1,1 +1,3 @@
-<text size="mini" class="btn" bindtap="click">{{textContent}}</text>
+<view class="btn">
+  <text size="mini" bindtap="click">{{textContent}}</text>
+</view>

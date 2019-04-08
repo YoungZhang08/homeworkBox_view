@@ -1,0 +1,14 @@
+<view class="hw-boxdetail">
+  <view wx:for="{{list}}" wx:key="index" class="detail-content">
+    <view class="left">
+      <text>{{item.title}}</text>
+    </view>
+    <view class="left">
+      <image src="/images/boxes_list.png" />
+    </view>
+    <view class="right">
+      <text>{{item.deadline}}</text>
+    </view>
+  </view>
+</view>
+<slot />

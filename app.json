@@ -1,7 +1,10 @@
 {
   "pages": [
-    "pages/login/index",
     "pages/boxes/index",
+    "pages/publicSource/index",
+    "pages/createHomework/index",
+    "pages/sources/index",
+    "pages/login/index",
     "pages/createBox/index",
     "pages/joinBox/index",
     "pages/messages/index",
@@ -9,8 +12,7 @@
     "pages/users/index",
     "pages/aboutWe/index",
     "pages/operation/index",
-    "pages/feedback/index",
-    "pages/sources/index"
+    "pages/feedback/index"
   ],
   "tabBar": {
     "color": "#e4e4e4",

@@ -7,5 +7,13 @@ Component({
       value: [],
     },
   },
-  methods: {},
+  methods: {
+    gotoResource(e) {
+      console.log(e.currentTarget.dataset)
+      const boxId = e.currentTarget.dataset.boxId
+      wx.navigateTo({
+        url: `../../pages/sources/index?boxId={{boxId}}`,
+      })
+    }
+  },
 })

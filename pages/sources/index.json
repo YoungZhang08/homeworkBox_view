@@ -1,3 +1,10 @@
 {
-  "navigationBarTitleText": "我的资源"
+  "navigationBarTitleText": "盒子详情",
+  "usingComponents": {
+    "Tab": "../../components/tab/index",
+    "Btn": "../../components/button/index",
+    "Popup": "../../components/popup/index",
+    "Boxdetail": "../../components/boxdetail/index",
+    "Nav": "../../components/navigator/index"
+  }
 }

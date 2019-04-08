@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "发布资源",
+  "usingComponents": {
+    "Btn": "../../components/button/index"
+  }
+}

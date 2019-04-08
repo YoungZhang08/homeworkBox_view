@@ -2,7 +2,7 @@
 <view class="boxes">
   <image class="back" src="/images/home_back.png" />
   <Tab>
-    <Nav slot="nav" class="nav" bind:clickListen="getCreateBoxes" textContent="我创建的" />
+    <Nav slot="nav" class="nav" bind:clickListen="getCreateBoxes" textContent="我创建的"/>
     <Nav slot="nav" class="nav" bind:clickListen="getAddBoxes" textContent="我加入的" />
     <image slot="image" catch:tap="showPopup" src="/images/add.png" />
   </Tab>

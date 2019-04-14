@@ -8,11 +8,11 @@ Component({
     },
     isUsers: {
       type: Boolean,
-    }
+    },
   },
   methods: {
     getParam() {
-      return this.data.isUsers;
-    }
-  }
+      return this.data.isUsers
+    },
+  },
 })

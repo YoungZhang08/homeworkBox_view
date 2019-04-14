@@ -5,6 +5,14 @@ Component({
     list: {
       type: Array,
       value: [],
+    },
+    isUsers: {
+      type: Boolean,
     }
   },
+  methods: {
+    getParam() {
+      return this.data.isUsers;
+    }
+  }
 })

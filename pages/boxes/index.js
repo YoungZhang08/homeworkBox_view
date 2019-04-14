@@ -7,6 +7,7 @@ const app = getApp()
 
 Page({
   data: {
+    selected: 0,
     title: '作业盒子',
     list: null,
     popupContent: ['创建盒子', '加入盒子'],
@@ -55,6 +56,15 @@ Page({
       .catch(() => {
         toast()
       })
+  },
+  active: function (e) {
+    //获取被点击的id
+    var id = e.currentTarget.dataset.id;
+    //将id值传给 currentId
+    this.setData({
+      selected: id
+    });
+    // console.log(this.data.selected)
   },
   onLoad() {
     this.getCreateBoxes()

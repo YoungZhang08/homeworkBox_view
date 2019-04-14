@@ -9,10 +9,9 @@ Component({
   },
   methods: {
     gotoResource(e) {
-      // console.log(e.currentTarget.dataset)
-      const boxId = e.currentTarget.dataset.boxId
+      const {boxid} = e.currentTarget.dataset
       wx.navigateTo({
-        url: `../../pages/sources/index?boxId=${boxId}`,
+        url: `../../pages/sources/index?boxId=${boxid}`,
       });
     }
   },

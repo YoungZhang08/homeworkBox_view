@@ -2,13 +2,13 @@
 <view class="sources">
   <image class="back" src="/images/home_back.png" />
   <Tab>
-    <Nav slot="nav" class="nav" bind:clickListen="getHomework" textContent="作业" />
-    <Nav slot="nav" class="nav" bind:clickListen="getSources" textContent="资源" />    
-    <Nav slot="nav" class="nav" bind:clickListen="getUsers" textContent="成员" />
+    <Nav slot="nav" bind:clickListen="getHomework" textContent="作业" data-id="0" bindtap="active" class="{{selected == 0 ? 'active_0 nav' : 'nav'}}" />
+    <Nav slot="nav" bind:clickListen="getSources" textContent="资源" data-id="1" bindtap="active" class="{{selected == 1 ? 'active_1 nav' : 'nav'}}" />    
+    <Nav slot="nav" bind:clickListen="getUsers" textContent="成员" data-id="2" bindtap="active" class="{{selected == 2 ? 'active_2 nav' : 'nav'}}" />
     <image slot="image" catch:tap="showPopup" src="/images/add.png" />
   </Tab>
   <view class='boxes-detail' wx:if="{{list}}">
-    <Boxdetail list="{{list}}"></Boxdetail>
+    <Boxdetail list="{{list}}" isUsers="{{isUsers}}"></Boxdetail>
   </view>
   <view wx:else>
     <text class="">屁都没有</text>

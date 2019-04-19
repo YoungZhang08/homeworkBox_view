@@ -32,7 +32,14 @@ App({
       .then((res) => {
         if (res.status === 200) {
           const { name: nickName, portrait: avatarUrl } = res.data
-
+          wx.setStorage({
+            key: 'portrait',
+            data: avatarUrl,
+          });
+          wx.setStorage({
+            key: 'name',
+            data: nickName,
+          });
           this.globalData.userInfo = {
             nickName,
             avatarUrl,

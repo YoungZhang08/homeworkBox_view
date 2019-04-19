@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/login/index",
     "pages/boxes/index",
     "pages/publicSource/index",
     "pages/createHomework/index",
     "pages/sources/index",
-    "pages/login/index",
     "pages/createBox/index",
     "pages/joinBox/index",
     "pages/messages/index",

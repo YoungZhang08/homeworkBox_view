@@ -5,7 +5,9 @@
   </view>
   <view class='info'>
     <text>请点击加号上传资源</text>
-    <image src="/images/public.png"></image>
+    <view class="plus">
+      <image src="/images/public.png"></image>
+    </view>
     <!-- <input type="file" value="{{url}}" bindinput="bindUrl" /> -->
   </view>
   <Btn class="submit-btn" bind:clickListen="publicSource" textContent="上传资源"></Btn>

@@ -11,7 +11,7 @@ Page({
     list: null,
     boxId: '',
     popupContent: ['发布作业', '发布资源'],
-    popupUrl: ['../createSource/index', '../publicSource/index'],
+    popupUrl: ['../createHomework/index', '../publicSource/index'],
   },
   onReady() {
     this.popup = this.selectComponent('#popup')

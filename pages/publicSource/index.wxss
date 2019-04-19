@@ -18,13 +18,15 @@
   text-indent: 10rpx;
   background-color: white;
 } 
-.info image {
-  /* position: absolute;
-  left: 50%;
-  margin-left: -200rpx; */
-  /* top: 50rpx; */
+.info .plus {
   width: 400rpx;
   height: 400rpx;
+  margin: 0 auto;
+  margin-top: 10rpx;
+}
+.info image {
+  width: 100%;
+  height: 100%;
 }
 .submit-btn {
   /* position: relative; */

@@ -1,25 +1,27 @@
-<view class="hw-boxdetail">
-  <block wx:if="{{isUsers}}==true">
-    <view wx:for="{{list}}" wx:key="index" class="detail-content">
-      <view class="left">
-        <image src="/images/boxes.png"/>
-        <!-- <image src="{{item.portrait}}" /> -->
-      </view>
-      <view>
-        <text>{{item.name}}</text>
-      </view>
+<block class="hw-boxdetail" wx:for="{{list}}" wx:key="index">
+  <view class="detail-content" wx:if="{{!isUsers && isHomework}}" bindtap='gotoHomework' data-boxId="{{item.boxId}}" data-id="{{item.id}}">
+    <view class="left">
+      <text>{{item.title}}</text>
     </view>
-  </block>
-  <block wx:if="{{isUsers}}==false">
-    <view wx:for="{{list}}" wx:key="index" class="detail-content">
-      <view class="left">
-        <text>{{item.title}}</text>
-      </view>
-      <view class="right">
-        <text>{{item.deadline}}</text>
-      </view>
+    <view class="right">
+      <text>{{item.deadline}}</text>
     </view>
-  </block>
- 
-</view>
+  </view>
+  <view class="detail-content" wx:elif="{{!isUsers && !isHomework}}" bindtap='gotoResources' data-boxId="{{item.boxId}}" data-id="{{item.id}}">
+    <view class="left">
+      <text>{{item.title}}</text>
+    </view>
+    <view class="right">
+      <text>{{item.deadline}}</text>
+    </view>
+  </view>
+  <view class="detail-content" wx:else>
+    <view class="imgLeft">
+      <image src="{{item.portrait}}" />
+    </view>
+    <view class='imgRight'>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+</block>
 <slot />

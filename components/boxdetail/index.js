@@ -8,11 +8,25 @@ Component({
     },
     isUsers: {
       type: Boolean,
+    },
+    isHomework: {
+      type: Boolean,
     }
   },
   methods: {
-    getParam() {
-      return this.data.isUsers;
+    gotoHomework(e) {
+      console.log(e.currentTarget.dataset)
+      const { boxid, id } = e.currentTarget.dataset
+      wx.navigateTo({
+        url: '../../pages/homeworkDetail/index',
+      });
+    },
+    gotoResources(e) {
+      console.log(e.currentTarget.dataset)
+      const { boxid, id } = e.currentTarget.dataset
+      wx.navigateTo({
+        // url: `../../pages/downloadResources/index?id=${id}&boxId=${boxid}`,
+      });
     }
   }
 })

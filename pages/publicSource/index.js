@@ -4,7 +4,7 @@ const { toast } = require('../../utils/toast')
 
 Page({
   data: {
-    boxId: '10625',
+    boxId: '',
     title: '',
     url: ''
   },
@@ -41,5 +41,15 @@ Page({
       .catch(() => {
         toast('发布失败')
       })
+  },
+
+  onLoad(options) {
+    let that = this
+    wx.getStorage({
+      key: 'boxid',
+      success: function (res) {
+        that.data.boxId = res.data
+      },
+    })
   }
 })

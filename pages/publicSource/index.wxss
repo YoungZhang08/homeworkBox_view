@@ -4,7 +4,6 @@
   background-color: #eeeeee;
 }
 .info {
-  /* position: relative; */
   padding: 60rpx 80rpx 0;
 }
 .info text {
@@ -22,7 +21,7 @@
   width: 400rpx;
   height: 400rpx;
   margin: 0 auto;
-  margin-top: 10rpx;
+  margin-top: 30rpx;
 }
 .info image {
   width: 100%;

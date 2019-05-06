@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/login/index",
     "pages/boxes/index",
     "pages/publicSource/index",
     "pages/createHomework/index",
@@ -12,7 +11,9 @@
     "pages/users/index",
     "pages/aboutWe/index",
     "pages/operation/index",
-    "pages/feedback/index"
+    "pages/feedback/index",
+    "pages/login/index",
+    "pages/mySources/index"
   ],
   "tabBar": {
     "color": "#e4e4e4",
@@ -45,5 +46,6 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "",
     "navigationBarTextStyle": "black"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

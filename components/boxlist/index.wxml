@@ -1,5 +1,5 @@
 <view class="hw-boxlist">
-  <view wx:for="{{list}}" wx:key="index" class="box-content" bindtap='gotoResource' data-boxId="{{item.boxId}}">
+  <view wx:for="{{list}}" wx:key="index" class="box-content" bindtap='gotoResource' data-boxid="{{item.boxId}}">
     <view class="left">
       <image src="../../images/boxlist_left.png" alt="" />
     </view>

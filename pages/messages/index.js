@@ -23,7 +23,7 @@ Page({
       method: 'GET',
     })
       .then((data) => {
-        // console.log(data)
+        console.log(data)
         if (data.data) {
           console.log(data.data)
           this.setData({ list: data.data })
@@ -38,7 +38,5 @@ Page({
 
   onLoad() {
     this.getHomework()
-
-    // console.log(this.getHomework())
   },
 })

@@ -4,7 +4,7 @@ const { toast } = require('../../utils/toast')
 
 Page({
   data: {
-    boxId: '10625',
+    boxId: '',
     title: '',
     text: '',
     deadline: '',
@@ -27,8 +27,8 @@ Page({
 
   // 创建作业
   createHomework() {
-    const { title, text, deadline } = this.data
-
+    const { title, text, deadline, boxId } = this.data
+    console.log(this.data)
     request({
       pathName: '/addHomework',
       data: {
@@ -40,6 +40,7 @@ Page({
       method: 'POST',
     })
       .then((data) => {
+        console.log(data)
         toast(data.msg, 'success')
         setTimeout(() => {
           wx.navigateBack({ delta: 1 })
@@ -48,5 +49,15 @@ Page({
       .catch(() => {
         toast('发布失败')
       })
+  },
+
+  onLoad() {
+    let that = this
+    wx.getStorage({
+      key: 'boxid',
+      success: function (res) {
+        that.data.boxId = res.data
+      },
+    })
   }
 })

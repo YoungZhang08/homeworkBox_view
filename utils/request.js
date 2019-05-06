@@ -1,4 +1,4 @@
-const request = ({ data, method, url = 'http://127.0.0.1:8000/homework', pathName, header }) => {
+const request = ({ data, method, url = 'http://127.0.0.1:8080/homework', pathName, header }) => {
   return new Promise((resolve, reject) => {
     wx.request({
       url: `${url}${pathName}`,

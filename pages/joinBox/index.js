@@ -23,6 +23,7 @@ Page({
       method: 'POST',
     })
       .then((data) => {
+        console.log(data)
         toast(data.msg, 'success')
         setTimeout(() => {
           wx.navigateBack({ delta: 1 })

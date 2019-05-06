@@ -4,6 +4,6 @@
     <image src="{{portrait}}" />
     <text>{{name}}</text>
   </view>
-  <navigator class="nav" open-type="navigate" url="../sources/index">我的资源</navigator>
+  <navigator class="nav" open-type="navigate" url="../mySources/index">我的资源</navigator>
   <navigator class="nav" open-type="navigate" url="../aboutWe/index">关于我们</navigator>
 </view>

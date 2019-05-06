@@ -83,10 +83,10 @@ Page({
         toast()
       })
   },
-  active: function (e) {
-    //获取被点击的id
-    var id = e.currentTarget.dataset.id;
-    //将id值传给 currentId
+  active(e) {
+    // 获取被点击的id
+    const { id } = e.currentTarget.dataset
+    // 将id值传给 currentId
     this.setData({
       selected: id
     });
@@ -100,4 +100,3 @@ Page({
     this.getHomework()
   },
 })
-

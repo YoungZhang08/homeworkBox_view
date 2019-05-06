@@ -1,66 +1,44 @@
 // pages/messages/index.js
-Page({
+const { request } = require('../../utils/request')
+const { toast } = require('../../utils/toast')
 
+const app = getApp()
+
+Page({
   /**
    * 页面的初始数据
    */
   data: {
-
+    title: null,
+    text: null,
+    deadline: null,
+    list: null,
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  // 获取自己的消息列表
+  getHomework() {
+    request({
+      pathName: '/getHomework',
+      data: { userId: app.globalData.openId },
+      method: 'GET',
+    })
+      .then((data) => {
+        // console.log(data)
+        if (data.data) {
+          console.log(data.data)
+          this.setData({ list: data.data })
+        } else {
+          this.setData({ list: null })
+        }
+      })
+      .catch(() => {
+        toast()
+      })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+  onLoad() {
+    this.getHomework()
 
+    // console.log(this.getHomework())
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

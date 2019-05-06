@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "发布作业",
+  "usingComponents": {
+    "Btn": "../../components/button/index"
+  }
+}

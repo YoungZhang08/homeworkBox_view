@@ -1,0 +1,25 @@
+<view class="hw-boxdetail">
+  <block wx:if="{{isUsers}}==true">
+    <view wx:for="{{list}}" wx:key="index" class="detail-content">
+      <view class="left">
+        <image src="/images/boxes.png"/>
+        <!-- <image src="{{item.portrait}}" /> -->
+      </view>
+      <view>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{isUsers}}==false">
+    <view wx:for="{{list}}" wx:key="index" class="detail-content">
+      <view class="left">
+        <text>{{item.title}}</text>
+      </view>
+      <view class="right">
+        <text>{{item.deadline}}</text>
+      </view>
+    </view>
+  </block>
+ 
+</view>
+<slot />

@@ -1,0 +1,1 @@
+<text size="mini" class="nav" bindtap="click">{{textContent}}</text>

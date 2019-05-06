@@ -1,0 +1,34 @@
+.create {
+  width: 100%;
+  height: 100vh;
+  background-color: #eeeeee;
+}
+.info {
+  /* position: relative; */
+  padding: 60rpx 80rpx 0;
+}
+.info text {
+  display: block;
+  font-size: 32rpx;
+}
+.info input {
+  width: 100%;
+  margin-top: 30rpx;
+  font-size: 25rpx;
+  text-indent: 10rpx;
+  background-color: white;
+} 
+.info .plus {
+  width: 400rpx;
+  height: 400rpx;
+  margin: 0 auto;
+  margin-top: 10rpx;
+}
+.info image {
+  width: 100%;
+  height: 100%;
+}
+.submit-btn {
+  /* position: relative; */
+  /* bottom: -175rpx; */
+}

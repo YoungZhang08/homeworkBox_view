@@ -1,0 +1,8 @@
+<view class='content'>
+  <view class="left">
+    <slot name="nav"></slot>
+  </view>
+  <view class="right">
+    <slot name="image"></slot>
+  </view>
+</view>

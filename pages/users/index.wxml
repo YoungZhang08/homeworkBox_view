@@ -1,2 +1,9 @@
-<!--pages/users/index.wxml-->
-<text>pages/users/index.wxml</text>
+<!-- pages/users/index.wxml -->
+<view class="users">
+  <view class="top">
+    <image src="{{portrait}}" />
+    <text>{{name}}</text>
+  </view>
+  <navigator class="nav" open-type="navigate" url="../sources/index">我的资源</navigator>
+  <navigator class="nav" open-type="navigate" url="../aboutWe/index">关于我们</navigator>
+</view>

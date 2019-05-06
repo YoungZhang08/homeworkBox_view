@@ -1,60 +1,72 @@
-//index.js
-//获取应用实例
+// index.js
+// 获取应用实例
 const { request } = require('../../utils/request')
+const { toast } = require('../../utils/toast')
 
 const app = getApp()
 
 Page({
   data: {
+    selected: 0,
     title: '作业盒子',
-    msg: '',
-    msg1: '',
+    list: null,
+    popupContent: ['创建盒子', '加入盒子'],
+    popupUrl: ['../createBox/index', '../joinBox/index'],
   },
-  //获取加入的盒子
-  getAddBoxes: function() {
+  onReady() {
+    this.popup = this.selectComponent('#popup')
+  },
+  showPopup() {
+    this.popup.showPopup()
+  },
+  // 获取加入的盒子
+  getAddBoxes() {
     request({
-      url: '/getAddBoxes',
+      pathName: '/getAddBoxes',
       method: 'GET',
-      data: {
-        userId: app.globalData.openId,
-      }
-    }, (bool, res) => {
-      if (bool) {
-        this.setData({
-          msg1: res.msg,
-        })
-      } else {
-        wx.showToast({
-          title: '获取失败',
-          icon: 'none',
-          duration: 500,
-        })
-      }
+      data: { userId: app.globalData.openId },
     })
+      .then((data) => {
+        console.log(data.data)
+        if (data.data) {
+          this.setData({ list: data.data })
+        } else {
+          this.setData({ list: null })
+        }
+      })
+      .catch(() => {
+        toast()
+      })
   },
   // 获取自己创建的盒子
-  getCreateBoxes: function() {
+  getCreateBoxes() {
     request({
-      url: '/getBoxes',
-      data: {
-        createId: app.globalData.openId,
-      },
+      pathName: '/getBoxes',
+      data: { createId: app.globalData.openId },
       method: 'GET',
-    }, (bool, res) => {
-      if (bool) {
-        this.setData({
-          msg: res.msg,
-        })
-      } else {
-        wx.showToast({
-          title: '登录失败',
-          icon: 'none',
-          duration: 500,
-        })
-      }
     })
+      .then((data) => {
+        console.log(data.data)
+        if (data.data) {
+          this.setData({ list: data.data })
+        } else {
+          this.setData({ list: null })
+        }
+      })
+      .catch(() => {
+        toast()
+      })
   },
-  onLoad: function () {
+  active: function (e) {
+    //获取被点击的id
+    var id = e.currentTarget.dataset.id;
+    //将id值传给 currentId
+    this.setData({
+      selected: id
+    });
+    // console.log(this.data.selected)
+  },
+  onLoad() {
     this.getCreateBoxes()
   },
 })

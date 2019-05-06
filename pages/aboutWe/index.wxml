@@ -1,0 +1,9 @@
+<!-- aboutWe.wxml -->
+<view class="aboutwe">
+  <view class="top">
+    <image src="/images/homework_logo.png" />
+    <text>作业盒子 1.0</text>
+  </view>
+  <navigator class="nav" open-type="navigate" url="../operation/index">操作手册</navigator>
+  <navigator class="nav" open-type="navigate" url="../feedback/index">反馈建议</navigator>
+</view>

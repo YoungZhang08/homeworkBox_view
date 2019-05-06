@@ -41,10 +41,10 @@
   border-radius: 0;
   text-align: center;
 }
-
 .signup {
   width: 300rpx;
   height: 60rpx;
+  margin: 0 auto;
   margin-top: 500rpx;
 }
 .signup button {

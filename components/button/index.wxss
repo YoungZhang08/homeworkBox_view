@@ -1,0 +1,15 @@
+.btn {
+  width: 590rpx;
+  margin: 0 auto;
+  height: 60rpx;
+  background-color: #73bdf6;
+  border-radius: 5rpx;
+  text-align: center;
+  margin-top: 50rpx;
+}
+.btn text{
+  width: 100%;
+  line-height: 60rpx;
+  font-size: 32rpx;
+  color: white;
+}

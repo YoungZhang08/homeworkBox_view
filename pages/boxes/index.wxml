@@ -1,16 +1,16 @@
-<!-- boxes.wxml -->
+<!-- 登陆进来的主界面 -->
 <view class="boxes">
-  <view class="boxes-back">
-    <image src="/images/home_back.png" />
+  <image class="back" src="/images/home_back.png" />
+  <Tab>
+    <Nav slot="nav" bind:clickListen="getCreateBoxes" textContent="我创建的" data-id="0" bindtap="active" class="{{selected == 0 ? 'active_0 nav' : 'nav'}}"/>
+    <Nav slot="nav" bind:clickListen="getAddBoxes" textContent="我加入的" data-id="1"  bindtap="active" class="{{selected == 1 ? 'active_1 nav' : 'nav'}}"/>
+    <image slot="image" catch:tap="showPopup" src="/images/add.png" />
+  </Tab>
+  <view class='boxes-list' wx:if="{{list}}">
+    <Boxlist list="{{list}}"></Boxlist>
   </view>
-
-  <view class="boxes-tab">
-    <view class="tab-left">
-      <navigator open-type="switchTab" url="/boxesList/index">我创建的</navigator>
-      <navigator open-type="switchTab" url="/boxesList/index">我加入的</navigator>
-    </view>
-    <view class="tab-right">
-        <image bindtap='' src="/images/add.png" />
-    </view>
+  <view wx:else>
+    <text class="">屁都没有</text>
   </view>
+  <Popup id="popup" textContent="{{popupContent}}" urlList="{{popupUrl}}" />
 </view>

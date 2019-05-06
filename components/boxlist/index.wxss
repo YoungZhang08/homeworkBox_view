@@ -1,0 +1,35 @@
+.hw-boxlist {
+  width: 100%;
+}
+.box-content {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 120rpx;
+  margin: 0 auto;
+  background-color: #fff;
+  border-bottom: 1px solid #dfe0e2;
+}
+.left {
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 50rpx;
+}
+.left image {
+  width: 100%;
+  height: 100%;
+}
+.right {
+  margin-left: 300rpx;
+  width: 150rpx;
+  height: 80rpx;
+}
+.right text {
+  display: block;
+  width: 100%;
+  height: 35rpx;
+  font-size: 30rpx;
+}
+.text-bottom {
+  margin-top: 10rpx;
+}

@@ -1,0 +1,12 @@
+<!-- operation.wxml -->
+<view class='operation'>
+  <view class='operation-list'>
+    <text>1. 如何设置个性化提醒</text>
+    <image src='/images/operation.png'></image>
+  </view>
+
+  <view class='operation-list'>
+    <text>2. 如何发布作业</text>
+    <image src='/images/operation.png'></image>
+  </view>
+</view>

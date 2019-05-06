@@ -1,0 +1,6 @@
+<view class="popup" hidden="{{flag}}" bindtap="hidePopup">
+  <view class="content">
+    <text class="text" catch:tap="jump" data-url="{{urlList[0]}}">{{textContent[0]}}</text>
+    <text class="text" catch:tap="jump" data-url="{{urlList[1]}}">{{textContent[1]}}</text>
+  </view>
+</view>

@@ -1,3 +1,10 @@
 {
-  "navigationBarTitleText": "作业盒子"
+  "navigationBarTitleText": "作业盒子",
+  "usingComponents": {
+    "Tab": "../../components/tab/index",
+    "Btn": "../../components/button/index",
+    "Popup": "../../components/popup/index",
+    "Boxlist": "../../components/boxlist/index",
+    "Nav": "../../components/navigator/index"
+  }
 }

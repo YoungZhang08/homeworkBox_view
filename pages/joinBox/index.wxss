@@ -1,0 +1,18 @@
+.join {
+  width: 100%;
+}
+.info {
+  padding: 0 80rpx;
+}
+.info text {
+  display: block;
+  margin-top: 35rpx;
+  font-size: 32rpx;
+}
+.info input {
+  width: 100%;
+  margin-top: 35rpx;
+  font-size: 20rpx;
+  text-indent: 10rpx;
+  background-color: white;
+}

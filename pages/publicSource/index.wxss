@@ -10,7 +10,7 @@
   display: block;
   font-size: 32rpx;
 }
-.info input {
+.info-input {
   width: 100%;
   margin-top: 30rpx;
   font-size: 25rpx;
@@ -21,13 +21,13 @@
   width: 400rpx;
   height: 400rpx;
   margin: 0 auto;
-  margin-top: 30rpx;
+  margin-top: 50rpx;
 }
-.info image {
+.plus image {
   width: 100%;
   height: 100%;
 }
 .submit-btn {
-  /* position: relative; */
-  /* bottom: -175rpx; */
+  position: relative;
+  top: 120rpx;
 }

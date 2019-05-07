@@ -7,7 +7,8 @@ Page({
   data: {
     selected: 0,
     isUsers: false,
-    isHomework: false,
+    isHomework: true,
+    isResources: false,
     title: '作业盒子',
     list: null,
     boxId: '',
@@ -21,8 +22,12 @@ Page({
     this.popup.showPopup()
   },
   getHomework() {
-    this.setData({ isUsers: false })
-    this.setData({ isHomework: true })
+    this.setData({ 
+      isHomework: true,
+      isResources: false,
+      isUsers: false
+    })
+    console.log("isHomework", this.data.isHomework)
     request({
       pathName: '/getBoxHomework',
       method: 'GET',
@@ -42,8 +47,12 @@ Page({
       })
   },
   getSources() {
-    this.setData({ isUsers: false })
-    this.setData({ isHomework: false })
+    this.setData({
+      isHomework: false,
+      isResources: true,
+      isUsers: false
+    })
+    console.log("isResources", this.data.isResources)
     request({
       pathName: '/findResources',
       method: 'GET',
@@ -64,8 +73,12 @@ Page({
   },
   getUsers() {
     // 向子组件box-detail传递isUsers，当isUsers为true，显示用户列表，否则就是其余两个列表
-    this.setData({ isUsers: true })
-    console.log(this.data.isUsers)
+    this.setData({
+      isHomework: false,
+      isResources: false,
+      isUsers: true
+    })
+    console.log("isUsers", this.data.isUsers)
     request({
       pathName: '/getUsers',
       method: 'GET',

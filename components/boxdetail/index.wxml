@@ -1,21 +1,38 @@
 <block class="hw-boxdetail" wx:for="{{list}}" wx:key="index">
-  <view class="detail-content" wx:if="{{!isUsers && isHomework}}" bindtap='gotoHomework' data-boxId="{{item.boxId}}" data-id="{{item.id}}">
+  <navigator 
+    class="detail-content"
+    wx:if="{{!isUsers}}"
+    hidden="{{isUsers && isResources}}" 
+    url="/pages/boxHomework/index?title={{item.title}}&text={{item.text}}&deadline={{item.deadline}}"
+    open-type="navigate"
+    >
     <view class="left">
       <text>{{item.title}}</text>
     </view>
     <view class="right">
       <text>{{item.deadline}}</text>
     </view>
-  </view>
-  <view class="detail-content" wx:elif="{{!isUsers && !isHomework}}" bindtap='gotoResources' data-boxId="{{item.boxId}}" data-id="{{item.id}}">
+  </navigator>
+  <navigator 
+    class="detail-content" 
+    wx:elif="{{!isUsers}}"
+    hidden="{{isUsers && isHomework}}" 
+    url="/pages/boxResources/index"
+    open-type="navigate"
+    data-boxId="{{item.boxId}}" 
+    data-id="{{item.id}}"
+    >
     <view class="left">
       <text>{{item.title}}</text>
     </view>
     <view class="right">
       <text>{{item.deadline}}</text>
     </view>
-  </view>
-  <view class="detail-content" wx:else>
+  </navigator>
+  <view 
+    class="detail-content" 
+    wx:if="{{isUsers}}"
+    hidden="{{isHomework && isResources}}">
     <view class="imgLeft">
       <image src="{{item.portrait}}" />
     </view>

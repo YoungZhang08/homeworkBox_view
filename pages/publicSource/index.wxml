@@ -1,14 +1,13 @@
 <view class="create">
   <view class='info'>
     <text>请输入上传资源的标题</text>
-    <input type="text" value="{{title}}" bindinput="bindTitle" placeholder="如：大物第一章PPT" maxlength="10" />
+    <input type="text" value="{{fileName}}" bindinput="bindFileName" placeholder="如：大物第一章PPT" maxlength="10" class='info-input'/>
   </view>
   <view class='info'>
     <text>请点击加号上传资源</text>
-    <view class="plus">
+    <view class="plus" bindtap='uploadFile'>
       <image src="/images/public.png"></image>
     </view>
-    <!-- <input type="file" value="{{url}}" bindinput="bindUrl" /> -->
   </view>
   <Btn class="submit-btn" bind:clickListen="publicSource" textContent="上传资源"></Btn>
 </view>

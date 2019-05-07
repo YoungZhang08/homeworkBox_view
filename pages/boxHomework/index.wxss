@@ -1,0 +1,24 @@
+/* pages/homeworkDetail.wxss */
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.detail-box {
+  width: 650rpx;
+  border-bottom: 1px solid #cccaca;
+  margin: 30rpx 0;
+}
+.detail-title {
+  display: block;
+  width: 650rpx;
+  font-size: 32rpx;
+}
+.detail-info{
+  display: block;
+  width: 650rpx;
+  font-size: 32rpx;
+  margin-top: 30rpx; 
+}

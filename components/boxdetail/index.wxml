@@ -1,11 +1,6 @@
 <block class="hw-boxdetail" wx:for="{{list}}" wx:key="index">
-  <navigator 
-    class="detail-content"
-    wx:if="{{!isUsers && !isResources}}"
-    hidden="{{isUsers && isResources}}"  
-    url="/pages/boxHomework/index?title={{item.title}}&text={{item.text}}&deadline={{item.deadline}}"
-    open-type="navigate"
-    >
+  <view>{{isUsers}}</view>
+  <navigator class="detail-content" wx:if="{{!isUsers && !isResources}}" url="/pages/boxHomework/index?title={{item.title}}&text={{item.text}}&deadline={{item.deadline}}" open-type="navigate">
     <view class="left">
       <text>{{item.title}}</text>
     </view>
@@ -13,13 +8,7 @@
       <text>{{item.deadline}}</text>
     </view>
   </navigator>
-  <navigator 
-    class="detail-content"
-    wx:elif="{{!isUsers && !isHomework}}"
-    hidden="{{isUsers && isHomework}}" 
-    url="/pages/boxResources/index"
-    open-type="navigate"
-    >
+  <navigator class="detail-content" wx:elif="{{!isUsers && !isHomework}}" hidden="{{isUsers && isHomework}}" url="/pages/boxResources/index" open-type="navigate">
     <view class="left">
       <text>{{item.boxId}}</text>
     </view>
@@ -27,10 +16,7 @@
       <text>{{item.title}}</text>
     </view>
   </navigator>
-  <view 
-    class="detail-content"
-    wx:else
-    hidden="{{isHomework && isResources}}">
+  <view class="detail-content" wx:else hidden="{{isHomework && isResources}}">
     <view class="imgLeft">
       <image src="{{item.portrait}}" />
     </view>

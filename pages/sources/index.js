@@ -1,8 +1,6 @@
 const { request } = require('../../utils/request')
 const { toast } = require('../../utils/toast')
 
-const app = getApp()
-
 Page({
   data: {
     selected: 0,
@@ -22,12 +20,12 @@ Page({
     this.popup.showPopup()
   },
   getHomework() {
-    this.setData({ 
+    this.setData({
       isHomework: true,
       isResources: false,
-      isUsers: false
+      isUsers: false,
     })
-    console.log("isHomework", this.data.isHomework)
+    console.log('isHomework', this.data.isHomework)
     request({
       pathName: '/getBoxHomework',
       method: 'GET',
@@ -49,9 +47,9 @@ Page({
     this.setData({
       isHomework: false,
       isResources: true,
-      isUsers: false
+      isUsers: false,
     })
-    console.log("isResources", this.data.isResources)
+    console.log('isResources', this.data.isResources)
     request({
       pathName: '/findResources',
       method: 'GET',
@@ -75,9 +73,9 @@ Page({
     this.setData({
       isHomework: false,
       isResources: false,
-      isUsers: true
+      isUsers: true,
     })
-    console.log("isUsers", this.data.isUsers)
+    console.log('isUsers', this.data.isUsers)
     request({
       pathName: '/getUsers',
       method: 'GET',
@@ -100,8 +98,8 @@ Page({
     const { id } = e.currentTarget.dataset
     // 将id值传给 currentId
     this.setData({
-      selected: id
-    });
+      selected: id,
+    })
   },
   onLoad(options) {
     this.data.boxId = options.boxId

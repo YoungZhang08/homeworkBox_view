@@ -14,6 +14,6 @@ Component({
     },
     isResources: {
       type: Boolean,
-    }
-  }
+    },
+  },
 })

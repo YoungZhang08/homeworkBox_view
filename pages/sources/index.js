@@ -34,7 +34,6 @@ Page({
       data: { boxId: this.data.boxId },
     })
       .then((data) => {
-        // console.log(data.data)
         if (data.data) {
           console.log(data.data)
           this.setData({ list: data.data })
@@ -59,7 +58,7 @@ Page({
       data: { boxId: this.data.boxId },
     })
       .then((data) => {
-        // console.log(data.data)
+        console.log(data)
         if (data.data) {
           console.log(data.data)
           this.setData({ list: data.data })

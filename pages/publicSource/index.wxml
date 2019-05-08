@@ -9,5 +9,5 @@
       <image src="/images/public.png"></image>
     </view>
   </view>
-  <Btn class="submit-btn" bind:clickListen="publicSource" textContent="上传资源"></Btn>
+  <!-- <Btn class="submit-btn" bind:clickListen="publicSource" textContent="上传资源"></Btn> -->
 </view>

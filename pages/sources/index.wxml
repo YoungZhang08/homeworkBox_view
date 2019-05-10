@@ -8,7 +8,7 @@
     <image slot="image" catch:tap="showPopup" src="/images/add.png" />
   </Tab>
   <view class='boxes-detail' wx:if="{{list}}">
-    <Boxdetail list="{{list}}"></Boxdetail>
+    <Boxdetail list="{{list}}" fromWhere="{{fromWhere}}"></Boxdetail>
   </view>
   <view wx:else>
     <text class="">屁都没有</text>

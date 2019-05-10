@@ -1,0 +1,35 @@
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.detail-image {
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 300rpx;
+}
+.detail-image image {
+  width: 100%;
+  height: 100%;
+}
+.detail-text {
+  width: 200rpx;
+  height: 32rpx;
+  margin-top: 20rpx;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 32rpx;
+}
+.detail-download {
+  width: 650rpx;
+  height: 60rpx;
+  margin-top: 345rpx;
+  background-color: #73bdf6;
+  border-radius: 7rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 32rpx;
+  line-height: 60rpx;
+}

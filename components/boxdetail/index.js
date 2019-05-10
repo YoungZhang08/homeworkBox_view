@@ -12,6 +12,7 @@ Component({
     }
   },
   ready() {
-    console.log(this.properties.fromWhere)
+    // console.log(this.data.list)
+    // console.log(this.data.fromWhere)
   }
 })

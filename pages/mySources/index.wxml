@@ -1,1 +1,15 @@
-<text>mySources</text>
+<view class='myresources'>
+  <view class='myresources-list' wx:if="{{list}}">
+    <view class='list-text'>
+      <text>我的资源</text>
+    </view>
+    <view class='list-info' wx:for="{{list}}">
+      <view class='list-boxid'>
+        <text>{{item.boxId}}</text>
+      </view>
+      <view class='list-title'>
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,1 +1,10 @@
-<text>boxResources</text>
+<!--pages/homeworkDetail.wxml-->
+<view class='detail'>
+  <view class='detail-image'>
+    <image src="/images/logo.png"></image>
+  </view>
+  <view class='detail-text'>
+    <text>{{title}}</text>
+  </view>
+  <view class='detail-download' bindtap="download">下载</view>
+</view>

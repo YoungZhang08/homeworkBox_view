@@ -1,5 +1,9 @@
 <block class="hw-boxdetail" wx:for="{{list}}" wx:key="index">
-  <navigator class="{{'detail-content ' + (fromWhere == 'isHomework' ? 'show' : 'hidden')}}" url="/pages/boxHomework/index?title={{item.title}}&text={{item.text}}&deadline={{item.deadline}}" open-type="navigate">
+  <navigator 
+    class="{{'detail-content ' + (fromWhere == 'isHomework' ? 'show' : 'hidden')}}" 
+    url="/pages/boxHomework/index?title={{item.title}}&text={{item.text}}&deadline={{item.deadline}}" 
+    open-type="navigate"
+    >
     <view class="left">
       <text>{{item.title}}</text>
     </view>
@@ -7,7 +11,11 @@
       <text>{{item.deadline}}</text>
     </view>
   </navigator>
-  <navigator class="{{'detail-content ' + (fromWhere == 'isResources' ? 'show' : 'hidden')}}" url="/pages/boxResources/index" open-type="navigate">
+  <navigator 
+    class="{{'detail-content ' + (fromWhere == 'isResources' ? 'show' : 'hidden')}}" 
+    url="/pages/boxResources/index?boxId={{item.boxId}}&title={{item.title}}" 
+    open-type="navigate"
+    >
     <view class="left">
       <text>{{item.boxId}}</text>
     </view>

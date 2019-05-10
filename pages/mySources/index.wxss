@@ -1,0 +1,37 @@
+page {
+  background-color: #eeeeee;
+}
+.myresources {
+  width: 650rpx;
+  height: 100%;
+  margin: 0 auto;
+}
+.myresources-list {
+  margin-top: 50rpx;
+}
+.list-text {
+  margin-bottom: 20rpx;
+}
+.list-text text {
+  font-size: 35rpx;
+}
+.list-info {
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  background-color: #fff;
+  border-bottom: 1px solid #eeeeee;
+}
+.list-title, .list-boxid {
+  height: 100%;
+  line-height: 100rpx;
+}
+.list-boxid {
+  width: 200rpx;
+  padding-left: 20rpx;
+}
+.list-title {
+  text-align: center;
+  width: 400rpx;
+  margin-left: 50rpx;
+}

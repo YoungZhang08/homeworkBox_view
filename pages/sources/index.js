@@ -45,7 +45,7 @@ Page({
     })
     console.log('r', this.data.fromWhere)
     request({
-      pathName: '/findResources',
+      pathName: '/findBoxResources',
       method: 'GET',
       data: { boxId: this.data.boxId },
     })

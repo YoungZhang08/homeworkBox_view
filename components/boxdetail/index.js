@@ -14,5 +14,6 @@ Component({
   ready() {
     // console.log(this.data.list)
     // console.log(this.data.fromWhere)
+    // wx.startPullDownRefresh()
   }
 })

@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/login/index",
     "pages/boxes/index",
     "pages/mySources/index",
     "pages/boxResources/index",
-    "pages/login/index",
     "pages/publicSource/index",
     "pages/createHomework/index",
     "pages/sources/index",

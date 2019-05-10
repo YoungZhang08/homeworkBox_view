@@ -43,6 +43,7 @@ Page({
       .then((data) => {
         console.log(data)
         toast(data.msg, 'success')
+        this.onLoad()
         setTimeout(() => {
           wx.navigateBack({ delta: 1 })
         }, 500)

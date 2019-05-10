@@ -3,7 +3,7 @@
     <view class='list-text'>
       <text>我的资源</text>
     </view>
-    <view class='list-info' wx:for="{{list}}">
+    <view class='list-info' wx:for="{{list}}" wx:key="index">
       <view class='list-boxid'>
         <text>{{item.boxId}}</text>
       </view>

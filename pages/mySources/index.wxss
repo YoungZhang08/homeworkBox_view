@@ -31,7 +31,7 @@ page {
   padding-left: 20rpx;
 }
 .list-title {
-  text-align: center;
+  text-align: left;
   width: 400rpx;
   margin-left: 50rpx;
 }

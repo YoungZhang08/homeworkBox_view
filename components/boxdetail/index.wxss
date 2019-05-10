@@ -50,3 +50,9 @@
   line-height: 32rpx;
   font-size: 32rpx;
 }
+.show {
+  display: flex;
+}
+.hidden {
+  display: none;
+}

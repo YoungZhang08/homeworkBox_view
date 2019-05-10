@@ -1,8 +1,6 @@
 <block class="hw-boxdetail" wx:for="{{list}}" wx:key="index">
   <navigator 
-    class="detail-content"
-    wx:if="{{!isUsers && !isResources}}"
-    hidden="{{isUsers && isResources}}"  
+    class="{{'detail-content ' + (fromWhere == 'isHomework' ? 'show' : 'hidden')}}"
     url="/pages/boxHomework/index?title={{item.title}}&text={{item.text}}&deadline={{item.deadline}}"
     open-type="navigate"
     >
@@ -14,9 +12,7 @@
     </view>
   </navigator>
   <navigator 
-    class="detail-content"
-    wx:elif="{{!isUsers && !isHomework}}"
-    hidden="{{isUsers && isHomework}}" 
+    class="{{'detail-content ' + (fromWhere == 'isResources' ? 'show' : 'hidden')}}"
     url="/pages/boxResources/index"
     open-type="navigate"
     >
@@ -28,9 +24,7 @@
     </view>
   </navigator>
   <view 
-    class="detail-content"
-    wx:else
-    hidden="{{isHomework && isResources}}">
+    class="{{'detail-content ' + (fromWhere == 'isUsers' ? 'show' : 'hidden')}}">
     <view class="imgLeft">
       <image src="{{item.portrait}}" />
     </view>

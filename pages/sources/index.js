@@ -6,9 +6,7 @@ const app = getApp()
 Page({
   data: {
     selected: 0,
-    isUsers: false,
-    isHomework: true,
-    isResources: false,
+    fromWhere: 'isHomework',
     title: '作业盒子',
     list: null,
     boxId: '',
@@ -23,11 +21,9 @@ Page({
   },
   getHomework() {
     this.setData({ 
-      isHomework: true,
-      isResources: false,
-      isUsers: false
+      fromWhere: 'isHomework'
     })
-    console.log("isHomework", this.data.isHomework)
+    console.log('h', this.data.fromWhere)
     request({
       pathName: '/getBoxHomework',
       method: 'GET',
@@ -47,11 +43,9 @@ Page({
   },
   getSources() {
     this.setData({
-      isHomework: false,
-      isResources: true,
-      isUsers: false
+      fromWhere: 'isResources'
     })
-    console.log("isResources", this.data.isResources)
+    console.log('r', this.data.fromWhere)
     request({
       pathName: '/findResources',
       method: 'GET',
@@ -73,11 +67,9 @@ Page({
   getUsers() {
     // 向子组件box-detail传递isUsers，当isUsers为true，显示用户列表，否则就是其余两个列表
     this.setData({
-      isHomework: false,
-      isResources: false,
-      isUsers: true
+      fromWhere: 'isUsers'
     })
-    console.log("isUsers", this.data.isUsers)
+    console.log('u', this.data.fromWhere)
     request({
       pathName: '/getUsers',
       method: 'GET',

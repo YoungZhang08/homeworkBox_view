@@ -6,14 +6,12 @@ Component({
       type: Array,
       value: [],
     },
-    isUsers: {
-      type: Boolean,
-    },
-    isHomework: {
-      type: Boolean,
-    },
-    isResources: {
-      type: Boolean,
+    fromWhere: {
+      type: String,
+      value: '',
     }
+  },
+  ready() {
+    console.log(this.properties.fromWhere)
   }
 })

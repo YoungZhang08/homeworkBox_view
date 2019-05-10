@@ -1,8 +1,6 @@
 const { request } = require('../../utils/request')
 const { toast } = require('../../utils/toast')
 
-const app = getApp()
-
 Page({
   data: {
     selected: 0,
@@ -20,7 +18,7 @@ Page({
     this.popup.showPopup()
   },
   getHomework() {
-    this.setData({ 
+    this.setData({
       fromWhere: 'isHomework'
     })
     console.log('h', this.data.fromWhere)
@@ -92,8 +90,8 @@ Page({
     const { id } = e.currentTarget.dataset
     // 将id值传给 currentId
     this.setData({
-      selected: id
-    });
+      selected: id,
+    })
   },
   onLoad(options) {
     this.data.boxId = options.boxId

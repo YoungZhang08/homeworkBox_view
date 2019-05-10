@@ -1,10 +1,6 @@
 // pages/homeworkDetail.js
-const { request } = require('../../utils/request')
-
-const app = getApp()
 
 Page({
-
   /**
    * 页面的初始数据
    */

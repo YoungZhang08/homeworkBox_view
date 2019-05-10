@@ -1,4 +1,3 @@
-const app = getApp()
 const { request } = require('../../utils/request')
 const { toast } = require('../../utils/toast')
 
@@ -27,7 +26,9 @@ Page({
 
   // 创建作业
   createHomework() {
-    const { title, text, deadline, boxId } = this.data
+    const {
+      title, text, deadline, boxId,
+    } = this.data
     console.log(this.data)
     request({
       pathName: '/addHomework',
@@ -52,12 +53,12 @@ Page({
   },
 
   onLoad() {
-    let that = this
+    const that = this
     wx.getStorage({
       key: 'boxid',
-      success: function (res) {
+      success(res) {
         that.data.boxId = res.data
       },
     })
-  }
+  },
 })

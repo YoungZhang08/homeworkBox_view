@@ -8,22 +8,22 @@ Page({
     name: '',
   },
   onLoad() {
-    let that = this;
+    const that = this
     wx.getStorage({
       key: 'portrait',
-      success: function(res) {
+      success(res) {
         that.setData({
-          portrait: res.data
-        });
-      },
-    });
-    wx.getStorage({
-      key: 'name',
-      success: function (res) {
-        that.setData({
-          name: res.data
-        });
+          portrait: res.data,
+        })
       },
     })
-  }
+    wx.getStorage({
+      key: 'name',
+      success(res) {
+        that.setData({
+          name: res.data,
+        })
+      },
+    })
+  },
 })

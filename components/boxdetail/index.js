@@ -9,9 +9,9 @@ Component({
     fromWhere: {
       type: String,
       value: '',
-    }
+    },
   },
   ready() {
     console.log(this.properties.fromWhere)
-  }
+  },
 })
